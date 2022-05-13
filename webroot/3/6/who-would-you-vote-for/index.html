@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Who would you vote for? - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Who would you vote for?</h1>
+
+<div class="post" id="p15">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-06-2003 02:18:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well, the question is posed and the answers are ready....<br><br>
+--Matt  <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p18">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-06-2003 10:24:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I guess my vote is the only one that counts then!<br><br>
+I AM THE POLITICS MOUTH OF THE PEOPLE!<br><br>
+I think john Major is an excellent president of England.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p646">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">02-08-2003 22:58:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think our lack of submision says it all really...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p652">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-08-2003 11:26:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I made the poll and didn't even vote!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p693">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">04-08-2003 19:11:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">who did I vote for? I forget?<br><br>
+Who should I vote for? My mum makes me vote for the liberal democrats</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p695">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">04-08-2003 21:18:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">what the point of walking to a polling station when that 20 minutes could be spent sipping a cold one in the sun?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p696">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">04-08-2003 21:35:10</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">dont forget you can do it online or via text message bob!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p701">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">05-08-2003 07:46:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">surely you can't actually vote in a general election by text message?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p704">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">05-08-2003 10:52:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, you can in some araes of the country. For council elections at least. It's only a matter of time...<br><br><a href="http://news.bbc.co.uk/1/hi/england/2894339.stm" class="postlink">http://news.bbc.co.uk/1/hi/england/2894339.stm</a><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p717">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">05-08-2003 17:40:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Unless they pay me to do it im not gonna bother</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p749">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-08-2003 21:56:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Strewth, it's a sad thing that in some areas of the world people risk getting their arms chopped off when they vote, and yet do so anyway because they see it as so important, and in this country we can't even be bothered to take the relatively safe action of wandering down to the polling station or vote online. Mrs Pankhurt's probably turning in her grave (stupid woman).<br><br>
+Do you reckon this is <br>
+a) because you don't value what you've got, <br>
+b) we're just too lazy<br>
+c) because we don't reckon it'll make any difference?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p755">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-08-2003 22:21:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm gonna copy the last post to a new thread and setup a poll for you <img class="smilies" src="../../../images/smilies/rocker.gif" width="15" height="15" alt=":rocker:" title="Rocker"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p759">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-08-2003 22:32:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I always vote. I think it's wrong however to say that just because some people don't get the vote, we should be ashamed that we don't bother voting.<br><br>
+In those countries, the choice is freedom or oppression. Here it is freedom (compared to what they have). We vote for issues like the NHS management, public transport, education... all of which, to be honest, are not going to get so bad that the country will stop. I make it sound like that sometimes, but I really don't believe any government will put this country to ruins.<br><br>
+People in Zimbabwe etc, however, are voting to stop their land being stolen, to stop their family being killed, to stop slavery, hate and prejudice. It is a VERY different concept over there and it is unfair and unjust to state that our democratic <span style="text-decoration:underline">choice</span> not to vote is almost insulting to them!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p764">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">08-08-2003 17:49:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">To be honest im just not a politics person. I dont care. I know everyone like matt, alex and jez will probably have a go at me for that, but i havnt been brought up to care about politics and voting and parliment and stuff like that and i dont really take any interest in it. I like to watch the news and see whats going on, but id be looking out for the football or the funny story they have at the end! <br><br>
+So come on then, give me all of your crap about what a bad person i am for not caring! I can take it!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p770">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">08-08-2003 22:34:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I couldn't give a monkeys either.  (as you might have gathered) thats because I find it boring and there are more important things to think about.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p771">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">08-08-2003 22:39:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Like Becks vs. Stella?<br><br>
+I root for Stella on this one, although Cobra would be nicer. I have a Tiger beer to sample tomorrow. Expectations are high.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p772">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">08-08-2003 22:52:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">not really a regular drinker of becks so cant comment. and to be honest i do prefer other lagers to stella, but it comes tops of lager to get drunk the quickest to competition.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p776">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-08-2003 10:28:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What about Special Brew/Tennants?<br><br>
+I had some Becks last night, I think I prefer bottled Stella to it.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p780">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">09-08-2003 14:34:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But at least you can be bothered to say why you can't be bothered, which is something! I wouldn't dream of slating you for it! There's nothing wrong in not finding politics interesting-I find lots of it staggering dull, and wouldn't say I actually like politics, I like issues (much of the time politics seems to be 90% about finding a way to aviod the issues).<br><br>
+There is some merit in Matt's 'eat your greens because children in Africa are starving' comparison- of course there's a huge difference between us and Zimbabwae in what elections are about, because we're at different stages of development, but I still think it ought to make us thankful for what we've got in terms of democracy. Even if it's a bit soggy.<br><br>
+Not voting is your democratic right-except that by not voting, you put yourself in a kind of mixed category-no-one knows whether an individual person hasn't voted because they can't be arsed, don't believe in the process, don't believe it'll make any difference etc. My boyfriend doesn't actually vote, because he doesn't think any of the political parties should be running the country (he's not a Fascist, I hasten to add) but he goes along and spoils a ballot paper by writing on it exactly why he's not selected a representative, because spoilt ballots have to be counted, and are the only way to not-vote but say you still care, which I find pretty weird.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p789">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-08-2003 20:28:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">This is new in you. A year or so ago, you wouldn't have cared less. I had to virtually make you go and vote in the 2001 general election.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p800">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">11-08-2003 07:43:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">There are a lot of people who say such things as "I don't fully agree with any political party hence I feel i cannot vote for them" this is a not the case.<br><br>
+The chances of agreeng with everything a party has to say it absolutely mnisclule, spoiling your ballot paper on that basis seems a little petty to me.  Does he really expect a political party to hold his views exactly??<br><br>
+You have to pick a party who most closely fits with your thinking.  if none do are you an extremist?  Or is it that the parties don't offer the full spectrum of "reasonable" choice?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p804">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">11-08-2003 14:41:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I agree, to expect a political party to represent your views exactly is silly, as of course if you agreed with all their policies, the chances are you'd believe anything anyone told you!<br><br>
+My general political and wordly outlook is best represented by the political parties I vote for, which isn't a consistent right-wing vote.<br><br>
+However, I don't think Alex' boyfriend (aka Pete) spoils his paper because he is frustrated that no party represents him, he does it because he thinks the system doesn't represent him. He is making the statement that he'd rather waste his ability to change anything right in their noses. It is based on the premise that:<ol style="list-style-type:decimal"><li>Those in charge will actually care he's spoiling the paper</li><li>It'll make more difference than voting</li></ol> In this case, I think that spoiling a paper is silly, as they won't care and I fail to see how not voting can be more of a statement than actually voting and trying to change something. The wonderful thing about democracy is that anyone can make a say. Take independent MPs. They're popular if they have something real to say - hence why they exist. If people have something important to say that they believe represents everyone, let them stand for it in government! If he's too young, get someone to do it for him!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p808">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">11-08-2003 14:53:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><strong class="text-strong">Matt Day, Leader of the Drunkit party Today Said</strong><br><blockquote class="uncited"><div>I agree, to expect a political party to represent your views exactly is silly, as of course if you agreed with all their policies, the chances are you'd believe anything anyone told you! 
+</div></blockquote></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p810">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">11-08-2003 14:55:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wha? wha? what?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

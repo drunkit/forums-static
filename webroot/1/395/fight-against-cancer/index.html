@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fight against cancer - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Fight against cancer</h1>
+
+<div class="post" id="p2411">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-11-2003 23:03:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.grid.org/download/" class="postlink">http://www.grid.org/download/</a><br><br><a href="http://www.grid.org/services/teams/team.htm?id=B52BA21F-19F0-4B9B-BF36-3071847A2263" class="postlink">http://www.grid.org/services/teams/team ... 71847A2263</a><br><br>
+Not sure too much what this is all about but it seems to be a genuine cause and theres a team section  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2413">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">18-11-2003 23:38:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">explain more please</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2414">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-11-2003 09:25:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">How it works<br>
+The Grid MP Global @ grid.org is a virtual supercomputer that can be harnessed to power computational research and analysis projects on a massive scale. By combining millions of online CPUs worldwide to work on extremely large computational projects, problems can be solved more quickly and less expensively than by conventional methods. Now any networked computer can help fuel research and projects that previously may have required a bank of supercomputers or a hundred years to complete. <br><br>
+Its like the seti project</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2422">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-11-2003 10:36:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My department works on the grid and in my third year I get the option to program for it...<br><br>
+It sucks. They've made tonnes of mistakes on it and no one will ever use it...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2423">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-11-2003 10:38:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wait, I was getting it confused with <a href="http://rtlin1.dl.ac.uk/gridmon/" class="postlink">something else</a><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2424">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-11-2003 13:16:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've entered my humble server farm in to your league... prepare for a jolly good thrashing!<br><br>
+(I'm doing cancer research, as I don't wanna send smallpox info to the US military...)<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2425">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-11-2003 15:32:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Thanks  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2426">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-11-2003 20:06:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">No problem, you can delete "Fiddian" from your memberlist. It's one of our computers, I set it up an account, but then realised it could use my account details instead (so mattsday is two machines running this 24/7, both of them are above the target machine's specs)<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2427">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-11-2003 09:29:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just a thought: disable the smallpox one. It's research on smallpox for the US government. I read the license agreement and it appears they have no intention of sharing it with anyone else. It's also being used by the department of defense. The cancer one, however, does take longer to process <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2428">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-11-2003 09:40:42</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I dont think you can disable it but you can choose which you want to be working one</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2432">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-11-2003 12:43:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Click the device bit and it goes to the web<br><br>
+Then uncheck "Patriot Grid" and next time you download some stuff it'll be cancer <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+Also, I'm top of the league <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2433">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-11-2003 14:10:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">ok disabled smallpox<br>
+as for you being first what did you expect? I cant shovel coal 24/7 like you.  Some of us have a degree to fail!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2434">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-11-2003 16:27:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Fleh...<br><br>
+I'm failing just as well as anyone else!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2452">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">21-11-2003 13:35:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I love the way everyone pulls together for the cause  <img class="smilies" src="../../../images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2516">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">25-11-2003 14:01:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Have you given up on this already Mike?<br><br>
+You've only returned one set of results <img class="smilies" src="../../../images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2517">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">25-11-2003 14:33:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nope im still with it but NTL have cut us off again so i cant upload my results.  should be fixed today sometime....<br><br>
+~join the cause~</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2518">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">25-11-2003 14:39:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I still dont know what the hell is going on</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2519">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">25-11-2003 15:29:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">How come you're posting here then??<br><br>
+--Mat</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2520">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">25-11-2003 15:46:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Because i read every single post thats posted on this bored - thats what the little yellow things are for! And i like to understand whats happening. This thread has got quite big now so i was wondering why. Thats all</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2521">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">25-11-2003 16:01:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nah, I meant that for Mike, who's Internet connection doesn't work...<br><br>
+If he has no net, how can he post here?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2525">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">25-11-2003 16:33:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">mike IS the internet....thats how hes posting</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2533">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">26-11-2003 09:09:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah what alex said<br><br>
+--Neo</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2534">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">26-11-2003 09:14:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I don't like the idea of 'connecting' to <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":mike:" title="DEFINITELY Mike">...<br><br>
+I'm put off now <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2535">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">26-11-2003 10:45:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But i especially enjoy your connection  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2538">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">26-11-2003 11:38:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Is that supposed to be some geeky internet sexual inudendo?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2540">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">26-11-2003 16:52:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, you jealous?<br>
+i can talk dirty binary if you like  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2543">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">26-11-2003 17:30:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">connecting to  <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"> too often makes you go blind!<br><br>
+apparently</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2590">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 13:39:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Idiots Explanation please?<br><img class="smilies" src="../../../images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2612">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-12-2003 15:52:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You REALLY don't want to kniow...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2616">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">07-12-2003 17:20:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Take the red pill!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2620">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 19:26:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I did. <br>
+They made me spend a night in the cells.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2627">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">07-12-2003 20:11:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">we are all cells in the real world</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2644">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">08-12-2003 01:13:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">So I here. I intend to steer well clear of the place.<br>
+Incidently, I've been declared a fictional character.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2664">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">08-12-2003 16:44:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Pardon?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2665">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">08-12-2003 17:13:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">SHE HAS BEEN DECLARED A FICTIONAL CHARACTER</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2670">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">08-12-2003 21:44:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've joined Mike's team.<br><br>
+No really sure what it's doing, but it doesn't seem to be offending me and I'm told it's for a good cause.<br><br>
+Hope we win the league  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

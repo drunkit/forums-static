@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A new game - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>A new game</h1>
+
+<div class="post" id="p335">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">20-07-2003 18:18:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Here is something to keep everyoen addicted for a few hours:<br><br><a href="http://www.student.uwa.edu.au/~wedgey/slime1/index.html" class="postlink">http://www.student.uwa.edu.au/~wedgey/slime1/index.html</a><br><br>
+I cant win! But im sure someone will<br>
+Damn pathetic white slime</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p336">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">21-07-2003 00:14:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Lost on my first go... lost 6-4 on my second...<br><br>
+About to try for my third time... This could take a while...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p337">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">21-07-2003 00:31:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">No, just can't make it happen <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":-(" title="Sad"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p391">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-07-2003 12:03:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Too fucking hard! my best was 6-2!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p393">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">23-07-2003 12:33:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I just won the first level 6-5</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p435">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-07-2003 17:40:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">theres always one smart arse.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p439">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">24-07-2003 07:45:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've since won it 6-2 but I can't win the second level, its really hard.  damn the angry red slime!!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p452">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:21:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Was 5-0 up and lost 6-5...<br><br>
+Am angry about this game, but must continually play until I get past the first level.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p453">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:23:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yay, just won it 6-2...Come on red man...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p455">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:27:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Bah, I can beat white consistently now, but red is too hard and I can't be arsed to keep beating white to play him!<br><br>
+I give in!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p456">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:33:28</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Cool! You get a black thing in the next round...<br><br>
+I lied... I couldn't help myself. Beat red 6-2. Beat that Mr CC.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p457">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:36:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">...the slime* masters serves are impossible.<br><br>
+I give up now.<br><br>
+Keep losing 6-0.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p458">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">24-07-2003 10:37:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">cant wait for my windows update to finish so i can see what the hell you are all talking about</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p459">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:40:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">A roller coaster ride of an impossible-to-beat game...<br><br>
+It's damned hard and I just can't beat the slime master to get my trophey as the ultimate slime volley ball player in the world.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p462">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">24-07-2003 10:46:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Right i must beat red slime now!!<br><br>
+on with the volleyball!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p466">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 10:52:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Aparantly there are five levels!<br><br>
+The third is solid enough... let alone the fourth and fifth... I dread to think...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p468">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">24-07-2003 10:54:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">the second is hard enough, best i've managed s a 6-4 loss</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p473">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-07-2003 11:09:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You suck.<br><br>
+I beat him 6-2 the second time round!<br><br>
+Mwa ha ha ha ha!<br><br>
+Hint: I go for serve and volley.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p475">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">24-07-2003 11:43:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">have you tried the other games, football and cricket are wicked!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p480">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">24-07-2003 16:01:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The white one is too easy and the red one too hard!  Stupid angry slime</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p516">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">27-07-2003 17:11:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">beat white, got as far as 6-1 on red</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p568">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-07-2003 22:41:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I JUST BEAT BLACK!!!<br><br>
+YAY!<br><br>
+6-0 and all...<br><br>
+Now I'm on psycho slime...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p615">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 15:41:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Psycho slime is impossible. I've got as far as him three times now and it's just too hard...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p618">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">31-07-2003 16:17:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Got onto black slime master.  Im yet to find his weakness</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p619">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">31-07-2003 16:20:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">any tips????<br><br><br>
+I just lose every point</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p620">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 16:30:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">With the first two, bounce the ball at the back wall first then jump forward and lob them for your serve.<br><br>
+Stay close to the net and keep vollying everything that comes over. I win consistently against them. Serve and volly in other words.<br><br>
+The black one you can only win by spiking the ball down on to the court or from serving. If you tap forward very quickly when serving, the ball will bounce off the back wall, on to your head and over the net. This seems to ace the black one 90% of the time. That and just hit the ball short and down.<br><br>
+I rarely score against psycho, so I can't give any tips for him.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p621">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">31-07-2003 17:11:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i can get on to black but i just cant beat him. Im scared of this psycho slime though. I hate remembering my 18th birthday, sort it out matt!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p626">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-08-2003 02:47:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You gotta post more messages Bob to get a higher ranking!<br><br>
+--Matt<br><br>
+PS. I just walked back from Mission. Very drunk and very wet!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p637">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-08-2003 19:35:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just lost against psycho slime again... 6-3 this time.<br><br>
+Man he's hard!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p690">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">04-08-2003 17:49:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">aaaahhhhhhhh damn it! 5-0 up against black slime and still lost! <br><br>
+james cant even get past the first level-loser</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p697">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">04-08-2003 21:35:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">At last i reached the dreaded psycho slime. but cant beat him. best ive done is scored 3 goals! this is the best game ever though!!!!!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p699">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">04-08-2003 22:26:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I managed only three against the psycho...<br><br>
+Hard stuff.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p700">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">04-08-2003 23:27:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just lost 4-6 to the psycho. Can get to him nearly every time now.<br><br>
+Damn hard all the same!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p702">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">05-08-2003 07:49:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">you realise that when you lose you can simply press 'c' and it lets you play the same slime again?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p705">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">05-08-2003 10:53:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I realised it a little while back... But before I got to psycho I didn't know that... Which was annoying!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p889">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">18-08-2003 00:32:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Does anyone play this anymore?<br><br>
+I STILL can't get past psycho-slime!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p896">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">18-08-2003 17:50:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I have the odd go now and again, and have got to psycho slime a few times but i cant get past him either. I think the best ive done is 2 goals</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p903">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-08-2003 18:29:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Bob wrote:</cite>At last i reached the dreaded psycho slime. but cant beat him. best ive done is scored 3 goals! this is the best game ever though!!!!!!</div></blockquote></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p904">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">18-08-2003 18:35:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Lying toe rag. He hasnt' even beaten the first slime!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p905">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">18-08-2003 18:53:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">fine next time i get there i will send you a screen shot. twat cock end</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1195">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-09-2003 17:34:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I still see no screenshot...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

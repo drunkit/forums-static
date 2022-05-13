@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Political correctness - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Political correctness</h1>
+
+<div class="post" id="p2307">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">11-11-2003 22:54:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What is your opinion on PC phrases? Is being politically correct more offensive? Does PCness try to further the interests of some people whilst worsening other's situations?<br><br>
+For example, would being called vertically challenged offend you more than being called short? Or does "mutant albino genetically recessive globally dominant ethnic minority" an offensive PC term for white person?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2315">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">12-11-2003 09:50:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think we need to just call a spade a spade. No more euphemisms wrapped up in flowerly vocabulary. Unfortunately, I have gotten in a bit of trouble in the past for not exactly being politcally correct (I once said 'the jew' when talking to a group of Jewish lads...)<br><br>
+It's important though, that out of our directness we don't offend. Phrases like nigger etc should be left at home or in Bradford.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2327">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">12-11-2003 13:07:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Matt I think you are getting mixed up between political correctness and raciscm there!<br><br>
+Being racist is wrong and not very nice, but I think all these PC terms are a bit pathetic!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2330">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">12-11-2003 13:26:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">politically correct<br><br>
+adj. Abbr. PC <br><br>
+Of, relating to, or supporting broad social, political, and educational change, especially to redress historical injustices in matters such as <strong class="text-strong">race</strong>, class, gender, and sexual orientation. <br><br>
+Being or perceived as being overconcerned with such change, often to the exclusion of other matters.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2332">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">12-11-2003 13:48:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">So why does the term 'racism' exist then?<br><br>
+What is the difference?  <br><br>
+To me 'politcally correct' is things like vertically challenged etc. but 'nigger' is a racist term, not a politcally incorrect term. 'Short' is just a word, 'nigger' is an insult.<br><br>
+Do you see what I mean?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2338">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">12-11-2003 16:24:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Political correctness involves avoiding racism.  It means avoiding any descruiption which the describee would find offensive.<br><br>
+Oh well</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2339">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">12-11-2003 17:49:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>JoeyJoJo wrote:</cite>SoTo me 'politcally correct' is things like vertically challenged etc. but 'nigger' is a racist term, not a politcally incorrect term. 'Short' is just a word, 'nigger' is an insult.</div></blockquote>
+
+However if you were black,  or as more often is the case in the UK  an asian, and you went up to another black/asian preson and said "'sup nigger"; this would be perfectly normal and you would not expect to recieve harsh words/harsh fists in response.  The inverse would apply if you were white and did the same thing to the same person.<br><br>
+So does that mean that some people do not need to be politically correct but others do?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2340">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">12-11-2003 19:03:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I didn't exclusively keep my comments to racism, merely I used it as an example, as 'racism' is probably at the forefront of Political Correctness.<br><br>
+Othersuch words we cannot use now:
+<ul><li>Policeman (women can be police too aparantly)</li>
+<li>Manhole (Because 'womanhole' sounds so much better...)</li>
+<li>Actress (Because it's derogatory... aparantly. So, therefore, must 'mrs')</li>
+<li>Deaf (Instead: Aurally impaired)</li>
+<li>Blind (Instead: Visually challenged)</li>
+<li>Premiership referies (see above)</li>
+<li>Homosexual (Instead: queer)</li>
+<li>Queer (Instead: homosexual)</li>
+<li>Back tickler (Instead: Normally challenged)</li>
+<li>White (Instead: oppressor)</li>
+<li>McDonalds (Instead: Clown shit)</li>
+<li>Drunkard (Instead: Beveragely intoxicated)</li>
+<li>Northern (Instead: employmentally challenged)</li>
+<li>Asleep (Instead: Consciously challenged)</li>
+</ul>
+
+Hmm, I went a bit OTT there. I've probably crossed the boundies of PC on some of the items -- but non-PC is <strong class="text-strong">FUNNY</strong>. <br><br>
+Just my tuppence.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2341">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">12-11-2003 19:32:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">When we say that someone is visually impared, we would assume that the person has vision, but it is impared. Agree?<br><br>
+So why do we say that a blind person is visually impared when they can't see a fucking thing? It's not impared... it's non-existent.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2348">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">12-11-2003 20:25:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Would it be racist to call a black person racially challenged? Or racially impaired?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2353">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">13-11-2003 09:54:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I guess that would be the most politically correct way to say it... but  i'd guess they'd hate it.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2354">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">13-11-2003 10:27:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think further research is needed</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2355">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">13-11-2003 12:28:42</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I like racism, it improves the bond between friends.<br><br>
+I'm frequently racist to my flatmate dave who is half chinese.<br><br>
+Its all in good fun of course.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2373">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">14-11-2003 09:49:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Same with me and rakesh!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2384">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">14-11-2003 14:46:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Rakesh is great.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2389">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">17-11-2003 12:39:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yes.<br><br>
+He is great</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2599">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 14:17:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Anyone ever read 'The Politically Correct Bible' or 'The Politically Correct Book of Bedtime Stories'? Some bits are funny, but it just gets tiresome after a while, kind of like over-PC-ness in real life. <br>
+I think as long as people don't offend each other, then it's ok. <br>
+Personally I like the fact I'm both vertically and (frequently) directionally challenged, and don't mind being called what I am-a shortarse with no sense of direction- as long as it's being done in a friendly way.<br>
+Sometimes 'modern' descriptions can be helpful though-the whole 'visually impared' thing for example, because it can include people who are partially sighted as well as totally blind.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2605">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-12-2003 15:31:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That kind of thing is fine, but why not just 'sight problems' or 'a bit short'?<br><br>
+Let's call a spade a spade, not a garden excavation tool.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

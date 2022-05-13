@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>THE HANGOVER RATING SYSTEM - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>THE HANGOVER RATING SYSTEM</h1>
+
+<div class="post" id="p778">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">09-08-2003 11:13:02</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">THE HANGOVER RATING SYSTEM<br><br>
+1 Star Hangover *<br><br>
+No pain. No real feeling of illness. You slept in your own bed and when<br>
+you woke up there were no traffic cones in there with you. You are still<br>
+able to function relatively well on the energy stored up from all those<br>
+Vodka and red-bulls. However, you can drink 10 bottles of water and still<br>
+feel as parched as the Sahara. Even vegetarians are craving a cheeseburger<br>
+and a side of fries.<br><br><br>
+2 Star Hangover * *<br><br>
+No pain, but something is definitely amiss. You may look okay but you<br>
+have the attention span and mental capacity of a stapler. The coffee you<br>
+hug to try and remain focused is only exacerbating your rumbling gut,<br>
+which is craving a full English breakfast. Although you have a nice demeanour <br>
+about the office, you are costing your employer valuable money because all you<br>
+really can handle is some light filing, followed by aimlessly<br>
+surfing the net and writing junk e-mails.<br><br>
+3 Star Hangover * * *<br><br>
+Slight headache, Stomach feels crap. You are definitely a space cadet<br>
+And not so productive. Anytime a girl or lad walks by you gag because her<br>
+perfume / aftershave reminds you of the random gin shots you did with<br>
+your alcoholic friends after the bouncer kicked you out at 3:45 a.m. Life<br>
+would be better right now if you were in your bed with a dozen doughnuts<br>
+and a litre of coke watching daytime TV. You've had 4 cups of coffee, a gallon<br>
+of water, 2 Sausage Rolls and a litre of diet coke yet you haven't peed<br>
+once.<br><br>
+4 Star Hangover * * * *<br><br>
+You have lost the will to live. Your head is throbbing and you can?t<br>
+speak too quickly or else you might spew. Your boss has already<br>
+lambasted you for being late and has given you a lecture for reeking of booze. <br>
+You wore nice clothes, but you smell of socks, and you can't hide the fact that<br>
+you either missed an oh-so crucial spot shaving or it looks like you put<br>
+your make-up on while riding the dodgems (depending on your gender).<br>
+Your teeth have their own individual sweaters. Your eyes look like one big<br>
+Vein and your hairstyle makes you look like a reject from the second-grade<br>
+Class picture circa 1976. You would give a weeks pay for one of the following:<br><br>
+1. Home time,<br>
+2. A doughnut and somewhere to be alone<br>
+3. A time machine so you could go back and NOT have gone out the night before. <br>
+You scare small children in the street just by walking past them.<br><br>
+5 Star Hangover * * * * *<br><br>
+You have a second heartbeat in your head, which is actually annoying<br>
+The employee who sits next to you. Vodka vapour is seeping out of <br>
+every pore and making you dizzy. You still have toothpaste crust in the corners of<br>
+your mouth from brushing your teeth. Your body has lost the ability to<br>
+generate saliva, so your tongue is suffocating you. You'd cry but that<br>
+would take the last of the moisture left in your body. Death seems<br>
+pretty good right now. Your boss doesn't even get mad at you and your<br>
+co-workers think that your dog just died because you look so pathetic. <br>
+You should have called in sick because, let's face it, all you can manage to do is<br>
+breathe......very gently.<br><br>
+6 Star Hangover * * * * * *<br><br>
+You arrive home and climb into bed. Sleep comes instantly, as you were<br>
+fighting it all the way home in the taxi. You get about 2 hours sleep<br>
+until the noises inside your head wake you up. You notice that you bed has<br>
+been cleared for take off and is flying relentlessly around the room. No<br>
+matter what you do you now, you're going to chuck. You <br>
+stumble out of bed and now find that your room is in a yacht under full sail. <br>
+After walking alongthe skirting boards on alternating walls knocking off all the pictures, you<br>
+find the toilet. If you are lucky you will remember to lift the lid<br>
+before you spontaneously explode and wake the whole house up with your<br>
+impersonation of walrus mating calls. You sit there on the floor in your<br>
+undies, cuddling the only friend in the world you have left (the<br>
+toilet), randomly continuing to make the walrus noises, spitting, and farting.<br>
+Help usually comes at this stage, even if it is short lived. Tears stream<br>
+Down your face and your abdomen hurts. Help now turns into abuse and he/she <br>
+usually goes back to bed leaving you there in the dark. With your<br>
+Stomach totally empty, your spontaneous eruptions have died back to 15-minute intervals, <br>
+but your body won't relent. You are convinced that you are<br>
+starting to turn yourself inside out and swear that you saw your tonsils<br>
+projectile out your mouth on the last occasion. It is now dawn and you<br>
+pass your disgusted partner getting up for the day as you try to climb into<br>
+bed. She /He abuses you again for trying to get into bed with lumpy bits<br>
+of dried vomit in your hair. You reluctantly accept their advice and have a<br>
+shower in exchange for them driving you to the hospital. Work is not an<br>
+option. The whole day is spent trying to avoid anything that might make<br>
+you sick again, like moving. You vow never to touch a drop again and who<br>
+knows for the next two or three hours at least you might even succeed.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p779">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-08-2003 12:24:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've suffered all of those, except a 1-star.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p782">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">09-08-2003 16:37:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Though isn't FBDM the only one who's actually wound up going to hospital...?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p787">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">09-08-2003 20:15:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I feel an argument coming on using quotes....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p788">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-08-2003 20:27:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, I've never actually been to casualty!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p791">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">10-08-2003 12:42:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">im at number 4 level right now. Its not fun</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

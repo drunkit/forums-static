@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drunkit Mobile - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Drunkit Mobile</h1>
+
+<div class="post" id="p2866">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-12-2003 12:29:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Anybody know much about this?<br><br>
+I'm trying to upload a file and it says there is an error but that it has uploaded, but it's not there when I look.<br><br>
+I'm also trying to delete my currently stored files and it says they are deleted but when I return to the file management section they are still there!<br><br>
+Who looks after this?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2867">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">30-12-2003 13:03:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I dont know what your talking about!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2869">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-12-2003 13:11:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://mobile.drunkit.com" class="postlink">http://mobile.drunkit.com</a><br><br>
+The site someone (Matt?) set up where we can upload pics from our pc's onto the net and then get them onto our phones as wallpaper via WAP.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2877">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-12-2003 16:30:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">just says file format unknown when i try it</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2881">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-12-2003 00:50:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Fixed (and yes it was me who implemented it as a proof-of-concept design... just wanted to see if I could get it to work. There's vast potential in this kind of service and I have a fairly decent/secure working model <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy">)<br><br>
+Of course, Dave has more of the <a href="http://www.wapdevil.com" class="postlink">commercial ideas</a>, mine are just free service-type ideas for people to try out <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2882">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">31-12-2003 12:15:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">unfortunately for Dave his course won't let him do wapdevil in PHP (good programming thing which make uploading file easy).<br><br>
+Dave has to use ASP which is shite</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2891">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">05-01-2004 13:04:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://get.drunkit.com" class="postlink">http://get.drunkit.com</a><br><br>
+is this still the wap address as it says 'file format unknown' when I try to connect to it via my phone?<br><br>
+I've uploaded the file ok now though - thanks</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2896">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">05-01-2004 22:40:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">file format unknown is a network provider issue. In non tech terms your network gateway won't give your phone the file because it doesn't think it's a wap page.  <br><br>
+In technical terms your wap gateway won't execpt php generated headers and is infact looking for a pure .wml/.wmls (text/vnd.wap.wml) file. PHP is giving your phone the mime type after it has agreed to recieve the file, because the gateway doesn't know what to do with the file it simply tells your phone that the file format is unknown becuase the gateway doesn't like the file extention (in this case none).  <br><br>
+The problem can't really be solved by you. File extentions on the end of the files could help but it probably won't make a difference, however you can bypass the issue as follows.<br><br>
+Type into your wap browser <br><br><a href="http://mobile.drunkit.com/view/file,IMAGENAME.JPG/user,USERNAME/IMAGENAME.JPG" class="postlink">http://mobile.drunkit.com/view/file,IMA ... GENAME.JPG</a><br><br>
+this will then download the file to your phone. obviously swap username for your username, imagename for the name of the image, and make sure you get the file extention right (it'll most likey be .jpg, .jpeg, .gif or on rare occasions .wbmp). Make sure you get the case right, as in some cases Filename.jpg is different from filename.JPG.<br><br>
+A tip is to go to the file manager section of mobile.drunkit.com, and view the picture you want on your phone. Magically the text that matches what I have written above appears in the address bar on your browser/internet explorer.  copy and paste this into one of those free text things like that one on lycos and text it to yourself. When you get the text simply save the link as a bookmark - load it on your phone and it will download straight away.<br><br>
+There is probably a quicker way. But I don't know it.<br><br>
+-Additional: I got the info from a book by WORX on wap, wml and wmlscript - although it was refering to asp similar would apply to PHP.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2899">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">06-01-2004 13:16:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well bugger me I can't get it to work and I thought I was a computer nerd.  <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2904">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">06-01-2004 19:30:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hmm, I'm not sure why it's not working on mobile phones, what Dave says seems to be the case, but it really shouldn't be (I'm sending out the right content type).<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2907">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-01-2004 08:55:41</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">How come it worked before then?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2910">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-01-2004 09:39:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's what puzzles me.<br><br>
+I have four mental exams over the next two weeks. After they're done, I'll have a look at Drunkit mobile and try and fix <a href="http://get.drunkit.com/" class="postlink">http://get.drunkit.com/</a><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2912">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-01-2004 11:29:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Okay, had a look at it and (with the help of Dave) I know think I've fixed it.<br><br>
+Have a go and tell me what happens.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2913">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">07-01-2004 11:40:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">file format unknown  <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2914">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-01-2004 13:00:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Same here and I tried the thing Dave suggested and it said 'page not found'.<br><br>
+I don't know as much about computers as you guys, but would the fact Drunkit has changed servers since have anything to do with it?<br><br>
+It's probably nothing to do with it, but just trying to help!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2934">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">08-01-2004 01:46:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, that's exactly teh problem, since the server change.<br><br>
+As I said before, I'll take a proper look at it after exams  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2935">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">08-01-2004 08:56:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm not so stupid for a blonde then! He he!<br><br>
+Ok cool - good luck with your exams!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3041">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">27-01-2004 12:08:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Have you had a chance to look at this yet Mr Day?<br><br>
+How did the exams go?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3055">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">28-01-2004 12:53:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3060">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">28-01-2004 22:58:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I have one of the finest programmers and men in the world looking at it...<br><br>
+Well, I am anyway.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3062">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">29-01-2004 11:26:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I thought you meant me  <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3070">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">29-01-2004 22:41:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If you are dying to get onto it you can go to <a href="http://www.wapdevil.com" class="postlink">http://www.wapdevil.com</a> which is my site. Its just a beta version so it's not yet perfect, and whatever you upload can be seen by anyone, and there is no option to delete it afterwards... but feel free if you have something that you don't mind everyone seeing or hearing (it supports ringtones).<br><br>
+I do however recomend that you stick with drunkit if you can, as there are a lot of wholes in my one which won't get plugged untill the summer.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3071">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-01-2004 02:02:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Shouldn't really make a diff...<br><br>
+and stop stealing my customers <img class="smilies" src="../../../images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3072">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-01-2004 08:36:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">File format unknown!  <img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

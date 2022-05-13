@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Windfarms - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Windfarms</h1>
+
+<div class="post" id="p262">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 09:37:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ok so we're building lots of windfarms.  I'm definitely in favour f this idea, but i understand the concerns of the  oposition though, fluctuation in output will mean the need for a backup system, it won't be cheap, but then again we're going to run out of fossil fuels at some point so we may as well get our asses in gear with this kind of thing.<br><br>
+Views?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p263">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">17-07-2003 10:00:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wind farms have low running costs, high electricity outputs, no pollution.<br><br>
+They are better in almost every way than other power stations.  At the moment we can back them up with oil/coal/nuclear stations if it's not windy.<br>
+In 50 years time, hoefully we can back them up with solar and biomass plants.<br><br>
+I reckon everyone should have a mini wind turbine on the top of their house!  It would look cool, and surely provide a fairly significant input to household energy use.<br><br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p264">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:05:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My friend Malcolm built a wind tubine and put it on his house, the neighbours complaned to the council and it had to be removed, they now have it in the garden (has to be under 3m) but it get virtually no wnd there.<br><br>
+Wind power is not cheaper than coal and certanly not cheaper than nuclear, but I agree we have to persue it.  I think backing it up wth solar seems sensible, clear skies means no wind, hence sun will be around when the wind dies.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p266">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:11:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.uraniumsa.org/esd/energy_comparison_table.htm" class="postlink">http://www.uraniumsa.org/esd/energy_com ... _table.htm</a><br><br>
+If you look at this is shows wind power isn't cheaper than other forms of electricity production.<br><br>
+Nuclear is the best for clean air and cheap, reliable power, the only thing is the waste is quite nasty, but as the Nuclear industry argues it is already radioactive and n the ground when they start, all they do is dig it up, use it and put it back.<br><br>
+Fusion will be the answer, that's what we do here, try and make it work nicely.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p267">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">17-07-2003 10:13:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Surely wind power is cheaper than coal/nuclear?<br><br>
+Maybe initial costs are high, but running costs would be virtually non existant.  No mining, processing, waste disposal, little safety control.<br><br>
+You just build them then leave the wind to do it's job.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p268">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:15:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">maintainence is very high, the machines don't produce much power each and need parts replaced very regularly, especally offshore ones.  The overall cost is huge in terms of keeping the things running.  plus the systems for evening out the power they provide are large and costly.  its not a total disaster, but it is more expensive.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p269">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:19:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wind power average NFFO5 price large band 2.43-3.10 p/kWh - average 2.88 p/kWh <br>
+Wind power average NFFO5 price small band 3.4 - 4.6 p/kWh 4.18 p/kWh <br>
+New Combined Cycle Gas Plant (CCGT) * 1.8 - 2.2 p/kWh <br>
+New coal * 2.6 - 3.25 p/kWh <br>
+Existing coal * 1.4 - 1.95 p/kWh plus additional cost of retrofitting Flue Gas Desulphurisation of 0.3 - 0.5 p/kWh<br><br>
+Total around 2.0 p/kWh<br><br>
+Even the BWEA (British Wind Energy Association) agrees its more expensive than other forms of energy production and they ahven't even taken into account the cost of the backup systems.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p270">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">17-07-2003 10:23:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I bet the costs for nuclear power don't include decommisioning costs of the site when the plant becomes old.<br><br>
+And uranium in the ground is very different from processed uranium used in a power plant, so the 'we're only digging it up' argument doesn't hold.   <br><br>
+I love the "Environmental impacts" of wind power: 'can be unsightly, noisy, birds fly into rotors'!!!<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p271">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:35:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ok then, explan to me again how this process works.<br><br>
+1. uranium/plutonium in ground<br>
+2. Dug up and energy extracted through accelerating decay of atomic nuclei<br>
+3. waste put back but is MORE radioactive<br><br>
+don't believe everything greenpeace tell you</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p272">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">17-07-2003 10:36:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nuclear power is safe so long as the waste is treated properly and/or disposed of sensibly.<br><br>
+The problem with turbines is that you can't put them 'anywhere'. They look nasty, which means most places in England won't want them, they interfeare with shipping/fishing areas, which means that most coastal areas won't want them, leaving only a few areas in an island as built-up as Britain.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p273">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:39:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">the new ones will be offshore meaning that they are easy to avoid, just treat them as small islands.  This clears up that problem but makes them more expensiveto build, maintain and extrsct electricity from.  Still in favour overall.<br><br>
+But I think we should move away from fosil fuels to nuclear for the rest of it, its just hysteria that prevents nuclear energy being fabulous.  With the technology now its so cheap and clean, and waste management is a doddle.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p274">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">17-07-2003 10:41:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I agree, stupid ignorant environmentalists.<br><br>
+Wind power just seems so overrated to me at the moment; bravo for giving it the time of day though.<br><br>
+We should also consider using the abundent methane in our land fills as a form of power; it's being released into the atmosphere anyway, so we might as well make a use from it.<br><br>
+Anyway, I'm off to work!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p276">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 10:43:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">methane is a greenhouse gas anyway, so it is a good avenue to follow.<br><br>
+problem comes in that it is released at very low concentration.  Very hard to harvest it.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p278">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">17-07-2003 10:57:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Aren't our current nuclear waste disposal policies something along the lines of:<br>
+encase it in concrete, dump it in the Irish Sea, hope the problem goes away?<br><br>
+I find it difficult to trust a profit making organisation (ie BNFL) with the safety of the British population.  Dodgy Russians/Iranians/Americans are even more unreliable!<br><br>
+However safe they try to be, there is always the tiny risk of disaster, which has the potential to be catastrophic.  People who get worried about things are currently worrying about a terrorist attack on a nuclear plant or train carrying nuclear waste.  Wouldn't be very nice.<br><br>
+We would be much better off with wind farms.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p279">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">17-07-2003 11:06:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">to be fair covering it in concrete and throwing it to the bottom of the sea is better than pumping out all sort of noxious gasses causing global warming and acid rain, which at present is the only realistic alternative.  The nuclear waste is perfectly safe, people worry far too much about radiation, even if we somehow managed to completely spread nuclear waste through the sea it would still have bugger all radioactivity.<br><br>
+I'm all for using wnd power to the fullest extent possible, but eveyone agrees that for logistical reasons thats only 15-20% of the national energy use.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p290">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">18-07-2003 11:13:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My friend Pod wears a turbine. He is from India.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p513">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">27-07-2003 16:10:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">a good back up system for wind turnines would be imigrants.<br><br>
+you could make them run on a treadmill to generate electicity, and then when they eventually die you can put the bodies in a pit, seal it for a few years and then extract the gasses later on. - or would that make us nazi's? comments?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p644">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">02-08-2003 22:47:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm no scientist, but given how irresponsible and crap we are to the majority of our planet, I'm all for things that aer nicer to it. <br><br>
+I reckon we could do with other things than just mainstream power suppliers too though. <br>
+There's an organisation called Lili who have been looking into the practicalities of biodiesel production (they may have something on on their website which is <a href="http://www.lowimpact.org" class="postlink">www.lowimpact.org</a> but my computer doesn't seem to like it, so I don't know).</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p655">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-08-2003 11:40:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It's not a nationwide solution. Go Nuclear!<br><br>
+Although, because people see that as 'evil', we'll have to be content with: 'Go Turbines!'<br><br>
+Stupid ignorant activists/general public.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p657">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">03-08-2003 11:44:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">what about hydro power? no one has thought of that yet.  So long as we can find a reasonable sized bit of land to damn up we can gererate plenty of electricity.<br><br>
+Facing the not to distant resources crisis we should really start thinking of all other alternative power sources.  Even solar... anyone think that offshore solar power stations could work?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p660">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-08-2003 11:55:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Isn't that the point of this thraed? That, on page 1, offshore power stations were the topic?<br><br>
+I think they could, but they are expensive...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p677">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">04-08-2003 07:50:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Soalr power actaully is a waste of power.  It takes more energy to make a solar cell than you will harvest from it in its entire workng life.  Not a viable power source except in isolated places.<br><br>
+As for hydro ts ok, but in the UK sn't financially viable.  We have such a small country and such hgh land prices that the cost of the land to flood would be huge and we'd all pay through the nose for it.<br><br>
+Wave power has a lot going for it.  But that's one for the future.<br><br>
+in the mean time nuclear power is clean, cheap and efficient.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>THE FACES ARE SHIT - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>THE FACES ARE SHIT</h1>
+
+<div class="post" id="p2203">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-10-2003 12:30:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Matt I dont like these faces. THey are all shit. <br><br>
+None of them convey my emotions like I want to. <br><br><img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"> - Isnt happy enough<br><br><img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> - doesnt seem to be doing anything<br><br><img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"> - Not sad enough<br><br><img class="smilies" src="../../../images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"> -?<br><br><img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"> - That ones fine<br><br><img class="smilies" src="../../../images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"> - doesnt seem to be doing much<br><br><img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> - not as cool as the msn man (h)<br><br><img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"> - Looks like a spastic with a cleft lip<br><br><img class="smilies" src="../../../images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad"> - dunno what he is<br><br><img class="smilies" src="../../../images/smilies/icon_razz.gif" width="15" height="15" alt=":P" title="Razz"> - pink mouth? yeah more like a punch in the mouth<br><br><img class="smilies" src="../../../images/smilies/icon_redface.gif" width="15" height="15" alt=":oops:" title="Embarassed"> - just a pink dude<br><br><img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"> - similar to sad face but more shit<br><br><img class="smilies" src="../../../images/smilies/icon_evil.gif" width="15" height="15" alt=":evil:" title="Evil or Very Mad"> - looks like a cat<br><br><img class="smilies" src="../../../images/smilies/icon_twisted.gif" width="15" height="15" alt=":twisted:" title="Twisted Evil"> - looks like a smiling cat<br><br><img class="smilies" src="../../../images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"> - I like that one, its good for taking the piss<br><br><img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"> - not winky enough</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2205">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">30-10-2003 12:40:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Are you having a fun day james?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2206">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-10-2003 12:42:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah so far. Ive<br><br><br>
+Drank 3 cups of coffee<br>
+done fuck all work<br>
+written a tall tale<br>
+complained about faces, losing my phone, the dog pissing up the fridge, pink floyd being shite, people not going out and getting drunk <br><br><br>
+DOWN WITH THIS SORT OF THING!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2209">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-10-2003 12:51:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Can we not get some different ones from somewhere Matt?<br><br>
+Don't forget these:<br><br><img class="smilies" src="../../../images/smilies/icon_mrgreen.gif" width="15" height="15" alt=":mrgreen:" title="Mr. Green">  - don't understand the point of this one<br><br><img class="smilies" src="../../../images/smilies/rocker.gif" width="15" height="15" alt=":rocker:" title="Rocker">    - this one is pretty cool, we need more like it<br><br>
+We've got loads on the chat thing at work - there's drinking a pint and allsorts!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2216">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-10-2003 13:59:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If someone can find a good icon pack, I'll gladly upload it!<br><br><a href="http://www.google.com/search?q=phpbb+smileys" class="postlink">www.google.com/search?q=phpbb+smileys</a><br><br>
+-Matt <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2218">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-10-2003 15:34:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.smiley-faces.com/php/moresmilies.php?lan=" class="postlink">http://www.smiley-faces.com/php/moresmilies.php?lan=</a><br><br>
+Any of these any good?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2219">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">30-10-2003 15:48:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Jo....quiet day at work?   <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"><img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2220">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-10-2003 16:01:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well I am meant to be quite busy as it is month end, but I am ill so my concentration level is low! He he!<br><br>
+I'm off in 10 anyway - yay!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2222">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">30-10-2003 19:07:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">maybe the rest of you could scan in your face in a particular expression.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2224">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">30-10-2003 19:20:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">yes we could!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2225">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">31-10-2003 09:46:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I could help out. My dissertation title is "Can a neural network recognise expressions in human faces better than humans themselves"<br><br>
+Im a bit of an expert on faces, even though i have a big fat ugly one that looks like a bumhole.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2227">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">31-10-2003 09:47:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">mines on faces too!<br>
+we are not so unalike me and you</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2229">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">31-10-2003 11:28:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">hmmm......bob the eyes. doesnt have the same ring to it</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2231">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">31-10-2003 11:32:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Neither does Mike the gay</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2232">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">31-10-2003 11:39:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Are we still a little upset?<br>
+how cute</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2475">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-11-2003 17:12:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">tum te tum... any news on the faceS?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2480">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-11-2003 18:07:42</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Okay, I've replaced some of them...<br><br>
+Better now? <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":mike:" title="DEFINITELY Mike"> looks better. And <img class="smilies" src="../../../images/smilies/icon_evil.gif" width="15" height="15" alt=":evil:" title="Evil or Very Mad"> looks more evil too.<br><br>
+Is this <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> cool enough though??<br><br>
+--Matt.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2482">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-11-2003 19:06:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">beter... not perfect. Still slightly too gay. <br><br><br>
+Use MSN as a perfect guide to smileys.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2485">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-11-2003 22:33:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hmm, suits your sig.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

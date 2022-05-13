@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drunken Texting - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Drunken Texting</h1>
+
+<div class="post" id="p544">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">29-07-2003 07:41:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Texting at 2am is now  major part of any night out, and provides great entertainment for both the writer (who thinks he's being utterly hilarious) and the receiver (who finds it funny his mate is so battered).<br><br>
+This thread is dedicated to those messages written whilst 'under the influence'.<br><br>
+From my mate Charlie last night, at 23.07:<br>
+"Cock piss partridge. In the land of nod there was a sod, who obtained a pea from a pod.  Wank wanky poo poo".<br><br>
+I'm sure it made perfect sense to him at the time!<br><br>
+Again at 02.21<br>
+"You will love this one!  Took wrong train home, lost in sunbury.  1 hr drive back.  began to walk on Motorway when a bus not in service comes. I flag it down and blag lift to fulwell + get last bus to twick.  Find 2 young ladies in same predicament @ stop so walk through richmond park being trailed by some supspicious looking deer. Legendary night"<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p545">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">29-07-2003 08:27:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wow sam!<br><br>
+it appears you've found people just like you at uni.<br><br>
+That didn't happen to me.<br><br><img class="smilies" src="../../../images/smilies/icon_idea.gif" width="15" height="15" alt=":idea:" title="Idea"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p546">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">29-07-2003 08:56:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I remember you sending me a message once at about 11am asking "How many moldy melons in your bath?  Mad dogs and Englishmen", or something along those lines...<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p547">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-07-2003 11:10:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I once recieved "I am the cow king a good friend of the lgendary dustbin hoping you stop your eating of cows" from you Sam...<br><br>
+No excuses that it wasn't you who sent it... we know it's nonsense.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p551">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">29-07-2003 15:03:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Drunken texts are fun, i don't often send them</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1064">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">28-08-2003 07:59:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">From Matt Greenaroo at 2.10am Sunday morning after Po-Na-Na:<br><br>
+"mate so pissed i can't c. Played waterfall by stone roses what a tune pissed but not off the hook? Within reason"<br><br>
+Love the way he's changed his mind from being blind drunk to being 'within reason' in under a minute!  A sure fire sign of drunkeness I think...<br><br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1067">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">28-08-2003 08:46:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ho ho ho! I walked home with the Greenster. He was the only one out of you three who made it till the end! He was going on about how Donald's mate was his boss.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1072">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">28-08-2003 09:32:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Did we lose him somewhere along the line as I don't recall him being at my house when we finally got there!<br><br>
+I've just also remembered that Bob was doing roly-polys down the hill!  He he!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1074">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">28-08-2003 09:37:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">matt left us at the top of kings hill. bob tried to roll down the hill but he kept moving to the left and it didnt work like in the films</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1076">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">28-08-2003 09:39:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ah yes I remember now!!  Doesn't he live near me?<br><br>
+Then he had to get up before that taxi ran him over!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1090">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">28-08-2003 11:35:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wow, I genuinely don't remember going home... I think I left at around 1ish, but that might be a lie.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1114">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">28-08-2003 14:06:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">sam never did tell me how many moldy melons were in his bathtub</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1127">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">28-08-2003 17:11:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think i might have rolled in a poo</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1142">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">29-08-2003 07:45:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You better not have!  I hope there are no stains on my chairs!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3544">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">21-04-2004 17:28:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Apparently I sent the following two text messages after last Thursday at Studio (which, by the way, was a large improvement on Mission in my eyes).  They've just been forwarded to me...<br><br>
+"Schki! Crazy schki! 'Studio', what is that? Doesn't mean much to me, no tradition! They need to reinvent the feeling, baby!"<br><br>
+and then<br><br>
+"Firemen everywhere, smells like smoked cheese.  Apparently something to do with weekly rubbish collection.  A fine tale..."<br><br>
+I'd love to know what I was on about in the 2nd one - can anyone shed any light on this?<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3545">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">21-04-2004 21:06:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I thought it was quality there too...<br><br>
+Quality texts too... what the heck were they?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3546">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">22-04-2004 18:53:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Don't remember sending them unfortunately...<br><br>
+I can remember well up to the point where we started drinking Gin then Captain Morgan outside  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3547">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-04-2004 12:49:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, wasn't it you taht bought the captain morgan and I bought the gin?<br><br>
+The gin was quite mean.<br><br>
+The captain morgan was as vile as ever... probably moreso as I haven't had it for so long!<br><br>
+Who'd seriously buy that except jokers?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3548">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">23-04-2004 14:30:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">who did i buy a captain morgans for... but they were too much a a big flabby sissy girl to drink it?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3553">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">25-04-2004 16:57:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Matt Greenaway...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

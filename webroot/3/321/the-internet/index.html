@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Internet - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>The Internet</h1>
+
+<div class="post" id="p1827">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">07-10-2003 11:51:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Not so much governement policy, or anything too political, but what rattles me at the moment is the lack of laws that prevent spam.<br><br>
+We have the data protection act, which specifies that any data collected should be used for its proper use, and I'm always very carefull to tick the box that says something almong the lines of:<br><blockquote class="uncited"><div>"If you do not wish to recieve future mailings or offers from somesite.com, its affiliates or specially selected third parties, please check this box: "</div></blockquote>
+
+Yet somehow, I still end up with 20 (no joke) spams a day asking me if I want a bigger johnson, breast remodelling, a low cost loan, or diploma (to name but a few).  <br><br>
+Personally, I don't like it.  A company can buy a list of email addresses from a company like bca (who i work for) for just £10 per 1000 (see  <a href="http://www.bcamediasales.co.uk/email_broadcasting.asp" class="postlink">http://www.bcamediasales.co.uk/email_broadcasting.asp</a> for more details).  And this is a UK based company (although NAZI sorry, German owned).<br><br>
+Does anyone else out there think there should be some international law passed to stop spam? Or does anyone here have a point i've missed that could justify spam as a ligitimate and/or positive form of advertising?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1828">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">07-10-2003 11:54:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I personally like to be a offered the chance to see some xxx hot teens xxx who "want me".</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1829">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-10-2003 12:05:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I personally don't see how spam can be a good form of advertising as I never open any of those e-mails.  I don't know who they are from or whether they may contain a virus.<br><br>
+Also it worries me that my e-mail address is known to so many people which could increase the chances of someone hacking into my account because I don't feel that e-mail providers such as yahoo, hotmail etc. are that safe as they are web-based.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1834">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">07-10-2003 14:33:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But sad people do use them. If You had no hair and you had an email saying "instant hair regrowth" then you would have a quick look! Its the same as penis enlargement ones....................</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1838">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-10-2003 15:26:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But the point is, is it fair that all the people who don't suffer from hair loss etc.  have to put up with all the rubbish mails?<br><br>
+Yes the people advertising the stuff might get lucky that they might e-mail a vunerable person who will have a look, but their chances are very slim.<br><br>
+Plus if someone really wants to do something about their hair loss etc. they will go looking for it.<br><br>
+If I leave my e-mail account over the weekend - when I come back in and check it on a monday morning I have at least 50-100 spam e-mails to delete.  It's so annoying.<br><br>
+If you want all the xxx free porn stuff that that's up to you, but I don't want any cr@p in my mail box - I even get things like 'cure nail fungus'! Yuck!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1849">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-10-2003 16:36:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Think of it this way. If you charge £20 for something and send it to six million people, eight times each and <strong class="text-strong">one</strong> person buys it, you've made £20. It's cost you nothing so far.<br><br>
+The problem with such a law is that reasonable measures would have to be made to restrict spam:
+<ul><li>Changing email to no longer be free, thus losing the attraction for spammers (and losing the point/attraction of email too)</li>
+<li>Making email work on an encrypted level, using public/private keys. The American government are the number one obstical to this, with Microsoft being the number two. Remove those two obsticles and we'd all have been given universal high-level encryption and the virtual elimination of spam years ago (an example is gnupg or pgp). This way, only people you have said "I want you to send email to me" will be able to send encrypted email to you. Your email programme would then show you the encrypted email only and put the non-encrypted email elsewhere. This would stop people just guessing your email address.</li>
+<li>Clients having sophisticated spam filtering built-in. Microsoft were given a court injunction against adding this feature in Outlook Express 5 when it was revealed that they were possibly using the beta to filter non-microsoft friendly circulars, thus giving Microsoft an unfair advantage. Outlook Express 6 (the latest version, five years later) still has no built-in protection. Clients such as <a href="http://www.mozilla.org/projects/thunderbird/" class="postlink">thunderbird</a> do, however.</li>
+<li>Consumer awareness. In the event of spam, 80% of the time <strong class="text-strong">the unsubscribe button does not unsubscribe you</strong>. Instead, it tells the spammer that <strong class="text-strong">there is someone actively reading this email</strong> and they'll add you to their 'active list' - or a group of emails they know for a fact exists. If you've ever tried to unsubscribe and have got a 'page not found' or 'server not found' error, it was most likely that it's a false 'unsubscribe' link. Only unsubscribe from reputable companies <strong class="text-strong">or</strong> search google for <a href="http://www.google.com/search?q=opt-out" class="postlink">opt-out lists</a>.</li>
+</ul>
+
+Steps to take to avoid spam:
+<ul><li>Have two email addresses. One for friends and family, one for companies and web sites. <strong class="text-strong">Never, never, never</strong> post your main email address on the Internet. People run programmes to scan web pages and pick up all email addresses. They then add these to their spam lists. Drunkit tries to block as many as these as possible, but many probably do make it through. If you must post your email address, post your second account.</li>
+<li>Always tick the box! You don't want free offers or for your information to be shared. Be especially careful when filling out forms by hand!</li>
+<li>If your email programme or server supports it, turn on spam filtering. I use it personally and it filters 99% of spam. <strong class="text-strong">VERY</strong> rarely does it detect an email as spam when it is genuine. If you're using outlook express or outlook, you can search google for some <a href="http://www.google.com/search?q=spam+filter+outlook" class="postlink">spam filtering software</a>.</li>
+<li>Treat your email address as you would treat your telephone number. Don't give it to weirdo's who you don't know - or at least don't give your main one away. A good place to get a 'junk' mail account is <a href="http://www.hotmail.com" class="postlink">hotmail</a> or [url=<a href="http://www.yahoo.co.uk" class="postlink">http://www.yahoo.co.uk</a>]yahoo[/urll]. If you need an email address, Drunkit has a mail server you can set an account up on too. Ask me for more information (i.e. get <a href="mailto:whatever@drunkit.com">whatever@drunkit.com</a>)</li>
+</ul>
+
+Sorry this was an epic. I've had a lot of problems with spam in the past and these are the best tips I've come up with...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1854">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">07-10-2003 21:57:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">hows this for a crazy, yet workable idea.<br><br>
+With any good mail clients like Outlook, you can set up your own filter. You could set it up so that everyone who sends you an email has to have a certain line of text, like a key, in the email - or it goes to the junk bin to be read or deleted later on. Some kind of random string like KJTHFSUC7.<br><br>
+I mean, if everyone started to do it then eventually there would be no spam at all, as it would become unprofitable because no-one would read the spam.<br><br>
+Sound good or crazy? I think extreme and getting some people to remember to put the key into emails and matching the right key to the right person may be a little to far for spam.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

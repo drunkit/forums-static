@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EMU - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>EMU</h1>
+
+<div class="post" id="p161">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">08-07-2003 13:46:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Lets all do a group discussion about this...(and make sure all your points are there by Thursday)...<br><br>
+Discuss the following<br><br>
+-the main eu institutions<br>
+-the pros and cons of the britain joining the single currency<br>
+-eu enlargement in 2002 and the likely effect on u.k. business</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p162">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">08-07-2003 13:48:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">P.S.<br><br>
+-What were the 5 economic tests and how many did we pass?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p208">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">11-07-2003 13:20:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I just don't know enough about it right now!<br><br>
+Blame the government for lack of general information to the public about one of the most important decisions in fifty years.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2604">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 14:50:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Though to be fair I don't think the last governemnt or the one before that would have told us any more than this one have.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2607">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-12-2003 15:43:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The last government wasn't the one with which we had to decide to join or not. Nor did they waste time with a referendum in the Queen's speech on something they're never going to do this session.<br><br>
+The five tests are supposed to be entirely economic and it has been Labour's position that if the economic conditions are right, there will be a referendum to the public on the subject, regardless of the political climate.<br><br>
+Do you really think this is the case?? The descision for joining the Euro does have real economic factors, but it is not an economic one at heart - it is a political one.  Just as joining the European Constitution is a political one, the Euro is also.<br><br>
+And as we're looking at Europe, let me remind you of the kind of thing they're up to. They introduce constant and ridiculous legislation that undermind the autonomy of member states. Can you name much good that's come from Europe? The odd market trader sued for not listing his prices in kilograms? Sure, most Europeans find the (superior) metric system easy, but many Britons do not. For this generation, metric is no good.<br><br>
+The constitution will grant Europe to block legislation in member states and overrule governmental descisions. For example, Briton would no longer have individual control over fox hunting, as Europe could simply legislate against it for us. That means that accountability and representation is taken further away and the agenda becomes abstract. For example, Europeans may hate the initial thought of the House of Lords, and legislate against it. However, many Britons know it is a superior system to anything elected (such as a senate).<br><br>
+If you look at Europe, it is simply a playground for Germany and France. They mercilessly go after any country that fails to make it's financial targets, except themselves of course, who both failed to meet them this year. They want a European army for crying out loud! What's wrong with NATO???<br><br>
+Europe should be a community for trade and advancement, not a beurocratic super-state with a psychotic agenda.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2753">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">17-12-2003 00:01:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">why do we have to do your Business Studies homework for you James?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2754">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">17-12-2003 00:20:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">On a more seroius point I have a good idea on the NATO thing.<br><br>
+The EU is heading to become a global rival to the US and I don't think I'm blowing the lid on this.  The US have this big, expensive, take me up the shitter armed force which they can use to put political pressure on other nations (some of those may be in the EU).<br><br>
+Unfortunately for North Atlantic Treaty Organisation, the US was one of the founding nations, meaning that the EU can not use it to back up member states who are under pressure from the US.  Although pressure from the US is not extensive, the EU will need to start forming a decent military opposition so that the US would find it harder to enforce its sanctions on member states, and those around the world with which EU states cannot trade with due to sanctions enforced by the US.<br><br>
+If the EU forms its own fighting force, under the banner of the EU and the EU alone, they will have achieved this.  The problem is, no-one is going to be the first plonker to piss of the US.  Look what happened to the chinese embassy in Kosovo when the US were pissed of with their far eastern adversaries.<br><br>
+Anyway, I'm sure people are going to have lots to say about what I have said.  I am in the firm belief that a nation first needs economic unitiy (Euro), followed by a united armed force to protect its economic interests. <br><br>
+Wouldn't it be fun to put a sanction on the US, I refer to <a href="http://forscotland.com/tracklab/noindex-sanctions030508URL" class="postlink">http://forscotland.com/tracklab/noindex ... s030508URL</a> for a decent sanction that we should place on them.  The US illegally place a tarrif of 30% on steel, to protect their own industry. Why do we lets them? Because we would be smote if we kicked up a fuss.<br><br>
+Ultimately what I am suggesting would one day lead to a full on economic battle or full war with the US, but a nation that can actually stand up to the US as substantial military competitor will then be able to either take the place as the economic superpower, or remove the economic superpower that is the US.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2758">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">17-12-2003 13:04:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hmm, I don't like any idea which involves devolving Europe into a German idealistic state... Sounds a little too... familiar.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2802">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-12-2003 11:13:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Im all for blonde hair and blue eyes</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3056">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">28-01-2004 15:23:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Wow, I still havent done this.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3057">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">28-01-2004 18:59:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Was it really for a paper?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3059">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">28-01-2004 20:36:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">sure was! I cant be arsed to do it though. Its too hard.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3083">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">30-01-2004 19:40:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hummmm....optional work...yeah, I think I can remember that.....<br>
+Actually, technically all my work is optional. It's just that facing the supervisors isn't worth not doing it.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3087">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-01-2004 20:01:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">its not optional. its just late  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3098">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">03-02-2004 01:06:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Over six months late?!<br>
+Here is the difference-I've got people getting stressed if it's 6 <em class="text-italics">hours</em> late.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3100">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-02-2004 07:40:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">6 minutes for me but im doing a real course</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3103">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-02-2004 12:10:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ah, I knew they called you the six minute man, now I know why!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3105">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-02-2004 12:23:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">errr yeah! thats why obviously....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3107">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">03-02-2004 20:57:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If you areally interested in the business HND format I will tell you. <br><br><br>
+You do 16 units over 2 years (8 a year). Each unit has between 3 and 5 assignments. Assignments are either essays or presentations. An essay averages at about 3000 words. My world record was 6500 words which almost killed me. The best mark you can get is a distinction which is marked at the same level as a first at university (I have 3 so far  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"> ), then there is a merit or a pass. If you dont pass you get a referal. This means you have to just correct your errors. <br><br>
+I got a referal on that economics presenentation because I went out the night before and got drunk and beaten up. So as the best mark I can get is a pass, it doesnt matter when I do it. As long as its done before the end of the course. <br><br>
+This is the reason why I cant be arsed to go to uni. School is BORING for me and working is INTERESTING. HND is good enough for me as I'm a waster so I'd never make management level. If I did ever need a degree  I'd only need to go to uni for a year. <br><br>
+Hmm... nice</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3129">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">10-02-2004 00:50:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Alex B wrote:</cite>Over six months late?!<br>
+Here is the difference-I've got people getting stressed if it's 6 <em class="text-italics">hours</em> late.</div></blockquote>
+On my course... I have a peice to hand in which should have been handed in November 2002. Just to rub it in!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3161">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">10-02-2004 19:34:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">November 2002...? I don't really remember it.... what was happening about then?<br>
+And what are you studying again, Mike?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

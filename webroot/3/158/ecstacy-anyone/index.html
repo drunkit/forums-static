@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ecstacy anyone? - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Ecstacy anyone?</h1>
+
+<div class="post" id="p891">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">18-08-2003 10:15:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I don't take ecstacy, but on saturday night i went ot the coven in Oxford for some drum and bass and there were a lot of people on the stuff....<br><br>
+it made for a good night.  People on ecstacy are a lot nicer than drunk people, they cause no trouble, and they aren't being antisocial like smokers of any variety.  I understand that ecstacy is quite bad for your brain, but its gotta beat the ass of Alcohol for preventing people becoming assholes.  Nobody had even the smallest thought of violence.<br><br>
+Views?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p892">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">18-08-2003 10:17:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i should add, i used to be a bit worried about places with a reputation for drug use, but now I'd be happier in one of those places than at mission, lots of drunk rude boys ready to knock your head off for random reasons.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p895">
+	<div class="info">
+		<p class="poster">ka74ryn</p>
+		<p class="dt">18-08-2003 12:59:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i dont know a great deal about the social side of ecstasy as am sweet and innocent and dont know anyone who has touched the stuff. <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>
+but there is a quite good explanation of what it does to the brain here<br><br><a href="http://www.dancesafe.org/slideshow/index.html" class="postlink">http://www.dancesafe.org/slideshow/index.html</a><br><br>
+tho it is quite long...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p897">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">18-08-2003 17:51:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What a lovely rose!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p908">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">18-08-2003 20:53:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Drunk people are great after you've had some super...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p909">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">18-08-2003 22:40:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Erm...yeah great, friendly people on the night. But did you see any of them on the come down? They can get very paranoid and can be quite dangerous to yourself and others, just ask a certain drunkit regular, who shall remain anonymous due to censorship.<br><br>
+It can also be very annoying if you are not "pilling". Some pill monster may decide to follow you around and hump your leg all night because he thinks he's your bestest pal.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p912">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">18-08-2003 23:31:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, I agree, E has too much of an 'unknown' element and is really dangerous compared to other stuff that contributes towards a good night. The Drunkit regular will probably not answer, as he or she is anonymous due to censorship. Although, if I went to Brunel, I'd take E's as they'd be more cost-effective than drinking their shite.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p916">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">19-08-2003 17:31:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I am that regular! Only joking. <br><br>
+To be honest why shoud people go around talking about others personal experiences knowing full well that they dont want people to know about it? Its just petty and immature, and im sure i could find out loads of shit about loads of people that they wouldnt want others to hear, and stick it up here for everyone to read, but what would be the point?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p919">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-08-2003 17:37:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well maybe i dont like hearing stuff about my eyes every two seconds or how i smell of this that or the other but that doesnt mean that yourself or another mystery person seem to mind bringing them up constantly!<br><br>
+Its petty, its immature, its all in the name of comedy</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p924">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-08-2003 20:22:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">"Eye" see both your points <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br><br>
+Nay, you're right, it was beneath us to mention that and I'm sorry. Let me get back to a better topic.<br><br>
+DRINK AND BOBBY'S BIRTHDAY! WA-HEY!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p930">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">19-08-2003 20:52:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">WAHEY WOOOOOOOOO BOOYA!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1745">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">02-10-2003 23:33:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, got to say I've had more bad experiences with people who are on ecstacy than on any other drug but alcohol, and the come down looks less than pretty.<br>
+There is also the fact that a lot of people who like Drum and Bass just seem to be quite nice people! <br><br>
+And there are of course the wise words of warning from the Alabama 3....<br><br>
+'Being a lover man and a Dj, lots of girls come down the front when I'm on the 1's and 2's,<br>
+there was this one girl though, she was so beautiful, she used to knock my eyes out every damn time.<br>
+Then one night she took this funny little heart shaped pill and just dies, right there in front of me,<br>
+Now she don't dance to techno anymore.'</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2031">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">21-10-2003 11:39:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yes people do die when taking ecstasy, not many at all, but people do.<br><br>
+Also I'm living with 2 girls who've been on the pills and they are beginning to really annoy me.  So basically I think people on pills are fine as long as you don't have to live with them or be responsible for them.<br><br>
+Its certainly not for me.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2125">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">25-10-2003 22:17:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Straight to the point, statistically the death figures attributed to alcohol immensely dwarf those given for ecstacy.<br><br>
+However, drugs shouldn't just be seen as posing an immediate risk, there is also a great unknown potential long term risks.  Not forgetting that alcohol also has its fair share of long-term risks.<br><br>
+Fair enough, talking about come downs is all good. But, we've all been hungover.  Hang-over, Come-down....very different but also the same!<br><br>
+In all fairness i think the appropriate body needs to start doing some propper research into ecstacy.  You cant stop people taking it, so educate them into taking it safely.  <br><br>
+We've now got all these health warnings on cigarette packets, but why are bottles of booze not labled in the same manner?  After-all incidences of alcohol related disease and illness are increasing dramatically!<br><br>
+Plus its not all doom and gloom, there is one drug that may have a potential health benefit!  Only time will tell. One word - reclassification!<br><br>
+I'm not condoning the use of drugs!<br><br>
+One final point, Salvia Divinorum - do a search for it!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2303">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">10-11-2003 18:47:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I wonder whats worse for the brain.<br><br>
+A couple of pills or a night out on one of Sam's Vodbull nights?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2305">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">10-11-2003 22:12:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">vodka mixed with redbull has been attributed to its own fair share of deaths!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2600">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 14:28:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My housemate's boyfriend is doing his PhD on ecstacy use and its effects on memory. Can't remember much about what he's found out so far through, but he says he has real trouble finding male subjects.<br>
+I agree with Jez-being responsible for pill heads is annoying, but from a  medical point of view, they're not much harder to deal with than really drunk people. Except possibly that they often move faster.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2669">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">08-12-2003 21:30:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">SOunds like you've been taking a few too many Disco Biscuits yourself with a memory like that  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+I went to that Gatecrasher at the NEC thing last weekend, absolutely massive event with 15,000 people, a significant proportion of whom might have been taking something not quite legal...<br><br>
+Out of my group (about 10 of us went) some were on naughty things, some (inc me) were on Vodka RedBull.<br><br>
+The RedBull won the day, with more of the 'Bullers still dancing by 6am!<br><br>
+Crazy stuff.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2751">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">16-12-2003 23:47:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">can't believe this thread is still going</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2793">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">20-12-2003 00:53:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Can't believe half of these threads are still going.<br>
+Nope, sorry Sam, but I'm still a (reasonably) good girl, and the poor memory's just due to the fact my brain's wired up weirdly (it's now official!) not due to interesting substances.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2801">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-12-2003 11:12:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Aliens!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2811">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">20-12-2003 16:32:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's always one possible explanation...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2812">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-12-2003 17:25:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Alex's Brain was tampered by aliens or Alex is an alien? Either seems plausible...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2831">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">24-12-2003 11:52:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">although the likelyhood of us proving either are very low.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3126">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">10-02-2004 00:09:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">redbull mixed with vodka killed 5 people in the uk last year<br><br>
+i just read that more deaths are attributed each year to 'fishing' than the use of ecstacy.<br><br>
+After taking MDMA it takes over a week for the chemicals in your brain to return to 'normal'.<br><br>
+(just to keep this thread going...it was quite interesting)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3152">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">10-02-2004 13:19:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">There are also short-term effects such as psychological disturbances—depression, hallucinations, anxiety, hostility and aggression; sleeplessness; short-term memory loss—and physical effects such as high blood pressure, increased heart rate, and kidney, heart or liver failure.<br><br>
+Long-term effects of Ecstasy use include additional psychological disturbances that are often irreversible even when the drug use is stopped. Several of the short-term effects, if severe enough, can also lead to sudden death. Ecstasy, even in small doses, can lead to sudden death due to its effect on the heart.<br><br>
+Ecstacy killed 64 in uk last year</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3162">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">10-02-2004 19:36:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Mike wrote:</cite>
+Ecstacy killed 64 in uk last year</div></blockquote>
+
+64 deaths........but how many millions of pills are taken each weekend?<br><br>
+where did theses stats come from?<br><br>
+you forgot a short term affect...paranoia or does that fall under psycho disturbances???<br><br><br>
+they used to give MDMA to OAP's to make them happy!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3164">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">10-02-2004 19:48:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Actually, where did these stats come from? All seems really interesting.<br>
+Fishing is clearly far more hazardous than I though, and not just for the fish...<br>
+It's thought that some ecstacy deaths were PMA not MDMA (similar and sold as ecatacy, but more dangerous) but I can't personally understand the appeal of either. <br><br>
+They used to (and still!) give some scary things to OAPs. Budgie seed also used to contain marijuana. Now we know why the damn things sing all the time...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3165">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">10-02-2004 21:48:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">come on mike......reveal your sources<br><br>
+From what I've read, the main ingredient of ecstacy is either MDMA or MDA.  well, that mixed with god knows what.....dont forget these pills are made in illegal undergroud drugs labs...<br><br>
+lets not loose sight of why people take ecstacy...because of the 'positive' affects!  from what ive read about it, 'E' makes you: happy, talkative, loved up, friendly, sociable, helps you relax, make you want to dance, lowers your inhibitions, raises libido, and the cost. £3 for a pill and you're sorted all night, where as if you were out drinking it'd cost you a fortune in comparison!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3167">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">10-02-2004 22:03:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">So if you are fishing while on E... does that mean you're more likely to suffer from the effects of E or from the effects of fishing?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3168">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">10-02-2004 23:23:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">wow, fishing while on E!  taking your life into your own hands there!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3170">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">11-02-2004 12:04:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.spiked-online.com/Articles/00000002D1AF.htm" class="postlink">http://www.spiked-online.com/Articles/00000002D1AF.htm</a><br><br><a href="http://www.drugprevent.demon.co.uk/research_items/vol3_issue8.html" class="postlink">http://www.drugprevent.demon.co.uk/rese ... ssue8.html</a><br><br>
+couldnt find any uk deaths from red bull?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3171">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">11-02-2004 13:25:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Quoted on the website Mike posted: 'The findings emerged in a study of coroners reports which suggested stronger tablets, easier availability, falling prices and the growing popularity of drug cocktails were behind the rising death toll.'<br><br>
+That entire website seems to be clouded in right wing hearsay.  there is no evidence to back up the claims that pills are getting stronger. Certain instituations that have a vested interest in the safety of ecstacy users have observed a significant decrease in the strenght of ecstacy tablets in the last decade.<br><br>
+Easier availability: the notion to me of easily available ecstacy is completely absurd.<br><br>
+Drug cocktails: it seems as though people need to be educated on how to use chemicals safely....<br><br><a href="http://www.dancesafe.org" class="postlink">http://www.dancesafe.org</a><br><br><a href="http://www.canedintotnes.co.uk/ecstasy/index.htm" class="postlink">http://www.canedintotnes.co.uk/ecstasy/index.htm</a> E kills fewer than 10 people a year.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3173">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">11-02-2004 14:17:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I dont think all pills are getting stronger and i dont think there is a great risk or dying from them.  You cant say that there are no negative effects though so its a case of whether the good outweighs the risk.  Its personal choice. <br>
+I dont think you can be educated to make them any safer, you would have to be pretty dumb to not know what you can and cant do with these substances.  <br><br>
+Quote from website alex gives :"No cunts on me drugstable"<br>
+This is probably written by someone who is "Pilling one's socks off" which the site helpfully defines as "Taken a lot of E"</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3174">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">11-02-2004 14:22:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">There's no way to use things which are essentailly toxins, and the exact content of which you cannot be sure about, safely; but education would be a good start, and I think it's actually beginning to be taken seriously. <br><br>
+ My sister's 16, and gets the usual dugs talks at school (you know the kind: given by a nervous, fluffy-cardiganed social worker who's corrected every ten minutes by her audience) but brings home some stuff that actually seems helpful-like what to do if someone colapses/starts freaking out. <br>
+About time if you ask me.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3177">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">11-02-2004 16:08:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Mr_Lenehan wrote:</cite>can't believe this thread is still going</div></blockquote>
+
+Too right. That was in December... three months later and here it is.<br><br>
+The way I see it is that drugs aren't more common, they're just more topical. The more people priss about things, the better the media makes of it. Drugs are bad, but it's just as likely that more deaths are attributed to them; rather than more deaths being caused by them. The real source of drug problems is the crime associated with it. Dealers and so on are a massive cause of violence in clubs, as well as general every-day crime.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3181">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">11-02-2004 21:20:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">the bottom line is simple.....Dont do drugs</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3182">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">11-02-2004 21:36:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3183">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">11-02-2004 21:41:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">you wouldnt catch me fishing while on E</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3184">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">11-02-2004 21:52:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You wouldnt catch me fishing</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3185">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">11-02-2004 22:37:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You'd only catch me fishing if I was on E<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3187">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">12-02-2004 00:33:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">how the heck can so many people a year die through fishing?!?!<br><br>
+even 1 fishing death a year is nuts!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3189">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">12-02-2004 09:10:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">People drink when they fish</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3190">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">12-02-2004 13:51:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.worksmart.org.uk/health/viewquestion.php?eny=416" class="postlink">http://www.worksmart.org.uk/health/view ... hp?eny=416</a> &lt;-- 1,200 drivers killed per year, 300 of them driving as part of their job.  Does this mean we should teach children about the dangers of vehicle use, and teach them what to do when someone is having a bad reaction to a vehicle?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3191">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">12-02-2004 14:02:42</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Viagra on avergae kills 7 people per year based from figures starting from 1995 when the drug was first in the market.  In the same time period Ecstasy has killed on average 4 people per year which isn't a great deal.<br><br>
+I think we should give pill heads viagra instead, because its obviously more dangerous and is probably more fun - you'll also be able to see when guys are on viagra so you'll know why they are being so friendly.  (stats from <a href="http://www.urban75.com" class="postlink">www.urban75.com</a>)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3195">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">12-02-2004 16:54:02</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">People die fishing by getting their line caught in overhead electricity cables and frying themselves...<br><br>
+To spice up the debate, I know someone who recently took their first pill at Godskitchen and reckoned they had one of the best nights of their lives.<br>
+Certainly can't imagine much long term damage coming of this.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3197">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">12-02-2004 19:50:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">as Sam said, i know a fair few individuals who in their opinions have had some of the best nights/times/experiences, of their lives whilst using chemicals. not just E but also Cocaine...errr not together<br><br>
+wether these chemicals cause long term damage is still apparently a great unknown</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3199">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">13-02-2004 00:43:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">We kind of teach children the dangers of vehicle use- road safety. <br>
+A 'bad reaction to a vehicle' is what happens when my Dad realises that he's going to have to use the starting handle on our Morris Traveller.<br><br>
+What if the fish are tripping?<br><br>
+I think a lot of it depends on the substance and the person (and the relationship between the two.)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3205">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">13-02-2004 19:10:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think the stupid, poor, elderly and northerners should be given drugs to stop all their moaning about people doing better than them. The more messing up it does, the better. If it does nothing else, it'll teach decent southerners that life isn't all work and no fun.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3210">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">13-02-2004 19:39:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Some people have the best nights of their lives whilst fishing</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3214">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">15-02-2004 00:48:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just not the fish.<br><br>
+I wonder what constitutes a good time if you're a fish.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3223">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">16-02-2004 12:38:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Watching Jaws and drinking a fine white wine</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3224">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">16-02-2004 12:49:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I can't believe this thread is still going...<br><br>
+Why jaws?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3227">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">16-02-2004 12:58:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ultimate fish vs man confrontation unless you include flipper</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3228">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">16-02-2004 13:03:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Sharky and George showed the ugly side of the ocean, the side we don't often see from our living rooms.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3230">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">16-02-2004 14:08:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The crime busters of the sea?  I thought that was like an aquatic bill program</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3232">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">16-02-2004 14:21:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well yeah, but organised crime is something we just don't associate with warm, sandy beaches. The tourism trade are doing us over!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3233">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">16-02-2004 15:24:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Would they be sipping the fine white wine, or swimming in it? <br>
+How would they keep it in their glass underwater?<br>
+Would white wine really be a sensible choice, given that so many of their brothers have been mercilessly cooked in it?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3235">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">16-02-2004 16:28:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I dont really feel these questions deserve an answer</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3237">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">16-02-2004 19:22:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's just because you can't think of any.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3238">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">16-02-2004 19:48:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">are you all on pills?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3261">
+	<div class="info">
+		<p class="poster">Hot_Dog</p>
+		<p class="dt">18-02-2004 14:00:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well heres a thought. <br><br>
+Some people may know that I took 1 and a half pills once. And yes, it was without a doubt the best night of my life. In my opinion, spending a night being as happy as larry and having fun is nothing to be ashamed of. I don't have a habit of it but if somebody offered me an E I wouldn't dismiss it. I would consider where I am, who I am with and what alcohol i have drank before taking it. <br><br>
+What Lenehan says about the comedown is laughable! I felt.... tired and slightly weird. Although I was up till 6:00am so thats understandable. As opposed to when I was drunk as a skunk and had to be carried home, I was sick in the spare room, woke up in my pants in the kitchen then spent the whole day being sick and feeling much pain. <br><br>
+I would never recomend or offer people drugs because its up to the person if they want to do it.<br><br>
+I just find it strange how people are happy to get so drunk they can't remember anything but look down on takers of E. <br><br>
+You live on the earth for about 80 years.... have some fun gosh darn it!<br><br>
+ps you know who I am</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3262">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-02-2004 15:40:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">A good pipe and slippers are all that is needed for a great night in.  Why would anyone need chemical happiness unless they couldnt be happy in themselves</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3263">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">18-02-2004 16:00:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I do think this may well replace drunkit's longest ever thread!<br><br>
+I don't know who you are hot_dog, but I think now you've said all that it's going to keep this thread going for a good while!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3264">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-02-2004 17:36:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You would be shocked if you knew.....<br>
+The longest thread will never be beaten, its in drunkit history!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3265">
+	<div class="info">
+		<p class="poster">Frank</p>
+		<p class="dt">18-02-2004 19:54:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Im with Hot_Dog on this one, and i understand his/her reasons for wanting to remain anonymous.  I've no idea who Hot_Dog is, but it has encouraged me to post my experience of chemicals.<br><br>
+Mikes' view of 'chemical happiness' is rather banal and ill informed. Im not criticising those that take that opinion, but thats how you would categorise E at its most basic level; It is a chemical; It makes you high.  To those who have experimented, it is 'chemical happiness' yet so very much more! It has nothing to do with the individual not being able to be happy within themselves.  Those Drunkiteers that know me, can easily see the fact im an incredibly happy person.  But everyone has bad times!<br><br>
+Why do people take E? You drink to have a good night - people take E to have an amazing night!<br><br>
+But the bottom line remains.  I've had the best nights of my life on chemicals! Life is all about experiences. E for me has opened the door to some amazing experiences and thoughts! True, it causes a slight break from reality, but ask yourself - is that a bad thing? We all day dream! If thats not a break from reality - what is?<br><br>
+Im not a regular user of E as i respect the fact it has very powerful effects on the brain, but it makes a welcome change to getting drunk.  Say, special occasions.  Taking E is not as simple as going out and getting drunk.  You cant just drop a pill anywhere.  It has alot to do with where you're going, who you're with and how you're feeling.  You'll see that people that take E tend to be very responsible and mature about it. Like with everything though, you get a few twats that go OTT!<br><br>
+I also entierly agree with what Hot-Dog said about comedowns. Like with drinking, you dont dont always get hungover. You don't always have a comedown on pills! Comedown's make you feel spaced for a day, but no more than like you've missed a nights sleep - which you probably have!  Personally I dont mind comedown's - i think they're quite amusing! Hangovers don't make me laugh!<br><br>
+I wanted to post my view so that there would be some actual first hand experiences(along with Hot_dogs') of the subject matter - not just speculation!<br><br>
+I wont start with Charlie - thats a whole new thread!  <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3266">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-02-2004 20:04:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Heroin - now theres a buzz!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3267">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">18-02-2004 20:07:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">injected or smoked mike?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3268">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-02-2004 20:10:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><img class="smilies" src="../../../images/smilies/icon_rolleyes.gif" width="15" height="15" alt=":roll:" title="Rolling Eyes"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3269">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">18-02-2004 23:35:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think I have a fair idea of who some people are <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Big Grin"> Although he remembers the Whiting but not the Hobbs... I think he might get that..?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3270">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 08:48:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I think hot_dog and frank have made some fair points and I'll openly admit that my view on it all is probably very uneducated because I have never taken any kind of drugs in my life - not even smoked a spliff!<br><br>
+The discussions I've always had before with people that have 'experimented' always comes down to health related issues and they point out that I drink and it damages your liver, which I then argue back with - that's only if you drink all the time and I only drink in moderation.  Which then gets the comeback that you are alright taking E occasionally.  Fair enough I suppose!<br><br>
+But don't you worry about something happening to you???  I could never try anything like that because I would be so scared that something dodgy was in it.  I know most people would use the same 'reputable as safe' dealer, but what if for some reason something went wrong??  What if their dealer gave them something dodgy??<br><br>
+That doesn't happen with alcohol.<br><br>
+Also what about addictions? Obviously you can become an alcoholic which causes the obvious problems, but if you've had such an amazing night on E and with no bad comedown, surely that makes you want to do it more???  Having a really minging hangover from drinking can make you be more careful in the future, but if E has given you such a fantastic night you are going to start thinking 'well this is pretty good!'.<br><br>
+Also people who use E regularly are going to start having to take more to get the same affect and maybe move on to more harsher stuff - cocaine being one of them and like frank said, let's not get started on that!<br><br>
+Well that's just my opinion anyway - I'm sure most people who take it are responsible about it but I could never do it because I'd worry that something would go wrong or that I'd like it too much.  I just don't like the idea of pumping my body with these chemicals and there being a risk of something dodgy in it.  There's no wrong or right in this - just people who do and people who don't.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3271">
+	<div class="info">
+		<p class="poster">Hot_Dog</p>
+		<p class="dt">19-02-2004 10:37:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>JoeyJoJo wrote:</cite>
+<br><br>
+But don't you worry about something happening to you???  I could never try anything like that because I would be so scared that something dodgy was in it.  I know most people would use the same 'reputable as safe' dealer, but what if for some reason something went wrong??  What if their dealer gave them something dodgy??<br><br>
+That doesn't happen with alcohol.<br><br><br></div></blockquote>
+
+That is the risk. But its not a very big risk so its nothing to worry about. You just have to be cautious. I knew the person I did it with very well and he had a big batch of the same thing. E's come stamped with little symbols so you know what kind you are taking. You can also look them on the internet to see what they are and if there are any bad reports of them. I'll agree though, I was scared as soon as I had done it. <br><br>
+Surely this is the same risk that someone could spike your drink though?<br><br><br>
+With regards to the addiction thing... E is not addictive. People can become mentally dependant on it (i.e. "Oooh I can't have a good night without a pill") but it is not possible to become physically addicted. Oh and you definately wouldn't want to do more E on a comedown. I'd say a pillow and an X-Box would be more your kind of thing  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"> .<br><br>
+All these points are also my opinion and people have had different experiences.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3272">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">19-02-2004 11:37:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">wow! some interesting stuff on here!<br><br>
+My first thought is there are very differing views on E! The Right wing view tends to be, if you do a pill it WILL kill you and you'll be a waster all your life(ok abit extreme but you get the idea)! The users point of view seems to be, it isn't as unsafe as the media make out and it makes for some fantastic times....i mean, who are you supposed to belive?<br><br>
+Being scared is a natural human reaction. when i first started drinking i used to get a little bit scared.<br>
+I would assume dealers look upon selling their pills as a business.  What would be the point in having somethingin them that would make people very ill?  The only result would be the dealer having a batch they couldn't sell....not good for business!<br>
+Dealers may give you dodgy pills but large companies ocassionally stuff up and bottle poisons instead of alcohol by accident.  This happened only last year!<br><br>
+As Matt said it is fairly obvious who hot_dog and frank are! especially to those that have the amazing power and understanding of the Protocol of the Internet!  That and you could always look at their profile for their name and address</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3273">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-02-2004 12:08:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">People that make pills are not usually the people that sell them tho who know very little about what is in them.  Desperation tends to be the main reason someone would feel a need to sell drugs so i doubt that the contents of them will be high on their list of priorities.  <br>
+It can not be said that it is similar to having a drink spiked, as this would require you to actually give someone the opportunity to do this, pills will be dodgy without you having any blame for it.<br><br>
+I may be against these drugs but its only because ive seen the effects of long term use, and i suppose it can be similar to long term alcohol abuse in the way it affects your life but being more common there is at least more knowledge and help for alcohol.  Occational usage may be as safe as occational drinking, ive only seen the effects when people have gone too far.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3274">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 12:17:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote class="uncited"><div>Surely this is the same risk that someone could spike your drink though? </div></blockquote>
+
+I don't agree this is the same though.  You willingly put a pill in your mouth and swallow it - having your drink spiked is being given the drug against your own will and without you knowing about it.<br><br>
+To be honest I never hear of peoples drinks being spiked with E or anything else these days and I can't understand why a user would want to waste their pills doing such a thing - I don't know how much they cost, £7 a pill maybe???  That is a complete guess as I have no idea!<br><br>
+A lot of it now is girls having their drinks spiked with the date-rape drug Rophlynol (if that's how you spell it!) - where the victim is drugged and raped and can't do a thing about it or remember a thing about it.  The attackers are now even using this drug with a steriliser meant for cattle and horses in it so that their identity cannot be identified from any traces of semen left in the body.  This sterilisation is permanent meaning the victim will never be able to conceive.  It's a scary thought and it certainly makes me very wary of my drink.  <br><br>
+Sorry - that was going off the subject a little!<br><br>
+Alex, I hear what you are saying about who to believe.  There are very mixed opinions - you have all the media hype about it which I generally believe is to influence the younger generations into not starting up on it - and you have the people who use it who say it is safer than made out.<br><br>
+The problem is you get one case i.e. Leah Betts took 1 pill and died and the whole thing is blown out of proportion.  The thing that's always made me wonder is maybe Leah Betts was a regular user and just happened to have a dodgy pill one night?  Who knows?? Her parents are going to say she wasn't a druggie - of course they are!<br><br>
+I'm not condoning the use of drugs as I myself don't agree with it - I think it is illegal for a reason.  You can never stop anyone from taking one - they have the right to do what they want, but all the government etc. can do is accept that people do and are going to take drugs and ensure that they are well educated about it and know how to be safe.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3276">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-02-2004 12:28:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Rohypnol is real and used as a date rape drug but the stuff about it being combined with animal sterilisation drugs was a hoax email.  Still worrying, but maybe not as much?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3277">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 12:31:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Sorry by the way - yes I meant 'mentally dependant' on it.<br><br>
+I just think you would become more dependant on drugs because you would want to do that more than drink because you have a better time.<br><br>
+Also I think the people in the drugs industry are more clued up than you think.  If I was going to be a dealer I wouldn't want to sell my goods to just anybody - for all I know they could be a police 'mole' or something and if something went wrong and one of my customers ended up in hospital, I wouldn't know about it and you could wake up to the police on your doorstep.  Obviously it all has to be very 'hush hush', but I think there are intelligent people behind it all.  Quite scary!<br><br>
+Nowadays I think users are very sensible about where they get it from and how they go about doing it.  I think the old hype about 'rat poison' being put in etc.  isn't as common as it used to be- dealers have got to much to risk - i.e. their freedom - to risk selly dodgy pills.<br><br>
+I'd still be scared to take one though!!<br><br>
+It's when it gets to the long term affects and being mentally dependant that problems occur - people get desperate because they want to have that hit again and they feel like they can't have a good time or being their 'real' self without it.<br><br>
+I have seen a few cases with long term affects - they're all on cocaine now - plus I know of people who have gone to prison because of the crimes they have committed to fuel their habit.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3278">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 12:41:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I didn't know that the steriliser thing was a hoax e-mail.  You hear these things and just take it that's its true - it would be silly to dismiss it and not be careful with your drink.<br><br>
+Although girls should be being careful with their drinks anyway because of royhpnol anyway!<br><br>
+You would never know if it had been put in your drink and it would be so easy for someone to slip it into a glass of wine in a busy crowded bar.  I do notice that I am far more aware of my drink when I have a glass of wine or vodka and coke - anything in a glass, than I am when I have a bottle.<br><br>
+I never ever ever leave my drink unattended or let a stranger buy me a drink without me being there, but it would be easy to slip it into a glass whereas almost impossible putting it into a bottle that someone is holding.<br><br>
+It's so awful that you have to think and be aware of these things, but you have to to protect yourself.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3279">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-02-2004 12:43:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I remember the days when you could go out and leave your front door open</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3280">
+	<div class="info">
+		<p class="poster">Hot_Dog</p>
+		<p class="dt">19-02-2004 12:46:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's what I meant. Drinks being spiked with date rape drug not being spiked with e. I don't think people spike drinks with e. Unless they are bored or something. I dunno eh?<br><br>
+Who knows whats going through the dealers minds. The people at the top are probably wealthy gangsters with briefcases of money.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3281">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 12:47:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Lol!!   <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br><br>
+It is sad though - it makes me not want to bring any kids into this world!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3282">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">19-02-2004 12:56:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Leah Betts died from drinking too much water. Cause and effect was never attributed to E....look up the coroners report online!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3283">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-02-2004 13:00:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Thats what they do tho.  My sis looks at death certificates all day long and most of them are really dumb such as dying from senility.....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3284">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">19-02-2004 13:06:25</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">but its not dying from a dodgy pill...is it? i dont mean to be insensitive but if Leah Betts had not consumed that much water, would she be alive today?<br><br>
+thats where i come back to my primary point. People will take ecstacy no matter what - users have to know how to take it safely! Research and educate!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3286">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 15:16:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Which is where I show my ignorance on the subject - what do you mean she drank too much water???</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3287">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">19-02-2004 15:55:28</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">"The point is that overheating is the main danger of taking Ecstasy; sweating is essential to avoid overheating and water is essential in order to sweat. However, water can be harmful if you drink more than you can get rid of by sweating or pissing. It may then dilute your blood, and diluted blood causes tissue cells to swell, but the brain cannot swell inside the skull and the pressure can build up to a dangerous level"<br><br>
+Would she have drunk so much water if she wasnt on e?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3288">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">19-02-2004 16:09:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Blimey - I never knew drinking too much water can kill you!! I drink loads of the stuff!!!<br><br>
+Yeah that was what I was going to say too - she obviously drank so much water as an affect of the ecstacy, but then she also was not educated about taking them safely.  In some ways she should have researched this herself to ensure her own safety, but at the time the safety awareness was not around.<br><br>
+These days it is, although I actually didn't know that drinking too mcuch water was bad - I thought it was encouraged as I've seen posters in Brunel reminding users to drink water to stay hydrated.<br><br>
+How do you know how much is enough and would you remember this under the influence of ecstact?<br><br>
+I'm going home from work now so I will rejoin this discussion tomorrow morning! :0)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3290">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-02-2004 01:29:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, water is a big killer... also a life saver.<br><br>
+Sucks dunnit?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3292">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">20-02-2004 08:30:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Do you think that you'd actually remember how much water you had drank when on E though?<br><br>
+I know I forget how many drinks I've had when I'm drunk!<br><br>
+I know it's not the same, but just wondering.............</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3293">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-02-2004 09:16:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I dont think it affects your memory in the same way...<br>
+I heard once there was a woman that had a non serious poisonous bite from a snake at night, called her doctor who told her to drink lots of water and see him in the morning.  She then drank so much water out of panic she died.  although i seem to recall she was an american....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3295">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">20-02-2004 12:04:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">LOL!   <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3297">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-02-2004 15:44:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">No more than two pints an hour I think it is with water.<br><br>
+Depends on the person and how dehydrated they are etc. For example, I often will drink three or four pints of water in an hour, but I dehydrate quite quicky. That and I top it up with beer to balance it out <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3310">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">24-02-2004 09:39:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>JoeyJoJo wrote:</cite>Do you think that you'd actually remember how much water you had drank when on E though?</div></blockquote>
+
+<br>
+I dont belive E affects your memory in the same way as alcohol....im no expert. i could be wrong!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

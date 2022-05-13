@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tell me your plans - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Tell me your plans</h1>
+
+<div class="post" id="p3350">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">02-03-2004 23:08:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Short term<br>
+medium term<br>
+long term <br><br><br>
+Mine are<br><br>
+Finish my couse<br>
+Go travelling<br>
+Get a decent job at intel then transfer to Folsom, California <br><br>
+I predict 0/3 will happen  <img class="smilies" src="../../../images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3351">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-03-2004 07:23:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mine are:<br><br>
+Get a summer job at IBM<br>
+Finish my course<br>
+Get a decent job where I can meddle with things<br><br><img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Big Grin"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3352">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-03-2004 09:56:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Finish degree<br>
+Start next degree<br>
+Finish degree</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3353">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">03-03-2004 11:33:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">finish my cars<br>
+start degree<br>
+travel<br><br><br><br><br>
+(burn down mission)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3354">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-03-2004 12:09:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">yours are less likely then james' youve been working on your car for nearly 4 years  <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3357">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">03-03-2004 13:11:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Short term (very short term!) - Go shopping in Bath tomorrow and spend lots of money on new clothes!<br><br>
+Medium term - Complete my first year of accounting qualification.  Also visit my Dad in the States.<br><br>
+Long term - Become a fully qualified accountant, earn shit loads of money and buy a lush house and a nice car!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3358">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-03-2004 13:32:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Bah, my dad's an accountant. It's a time of bad jokes and interesting fish.<br><br>
+Second degree Mike, pray what in?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3359">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-03-2004 14:08:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Human resource management.  If i can get a graduate scheme that will pay for it that is....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3360">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">03-03-2004 16:51:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ahahah HRM is for girls. Thats what I do. In fact Im doing it right now. <br><br>
+Its pretty interesting but for girls. <br><br>
+Its for girls remember...although dont you do psychology?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3361">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">03-03-2004 17:03:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm hardly a stereotypical accountant though - I'm the only in my department that wears pink jumpers! He he!<br><br>
+Well I don't mind it and it's a good career, so I'm gonna go for it!  Hard work but the rewards are good!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3362">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">03-03-2004 17:25:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I said HRM you spag. I was talking about Mike the girl</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3363">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-03-2004 17:59:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Anything that pays so much just to hire, fire and tell others to do your work gets my vote<br>
+Ill even wear the pink jumper</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3364">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">03-03-2004 20:32:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">mike you're right with the cars, lets not forget Alex managed to start uni - have his course cancelled - left uni - went home. when it came around to going back to uni deffered for another year......now hopefully i can afford to start uni THIS sept!!!!!!!!!!  yay!!<br><br>
+im looking forward to being a student again - then again all i did for the last 2 years was get drunk</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3365">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">04-03-2004 07:40:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Three more years of it then!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3369">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">07-03-2004 20:47:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Short term: finish 2nd year of degree + travelling in Summer<br><br>
+Medium term: finish 1st degree, then do a 1 year masters degree in something that sounds interesting, don't know what yet<br><br>
+Long term: job, no idea what/where etc.  Might do another ski season first if I feel like it.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3376">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-03-2004 22:41:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Finish 1st degree <br>
+Go to Japan/bum around for a year, maybe do some travelling <br>
+Do second degree (Children's Literature)/get some kind of job. <br><br>
+All pretty flexible. <br><br>
+If you want to boss people around, Mike, why don't you be a management consultant? (Or is that what you're doing only getting a degree in it first...?). They certianly seem keen to get people interested: if I get one more letter from PriceWaterhouseCoopers/Deloitte/Accenture/similar, or one more flier about bloody investment banking      (note: I do an English degree, an English dergee, with words, if I WANTED to spend my life working with numbers, I'd have done a MATHS degree...)       pain will be inflicted. Though probably just to me.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3396">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">09-03-2004 11:08:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i thought you had to be a manager for x number of years before you can tell other people how its done?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3409">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">10-03-2004 22:41:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Not going on the info they keep puttinging in my pigeon hole, sadly. Seems a twisted world where graduates who you wouldn't trust with a bicycle can wander into firms and tell people with 30 years experience where to stick it, but-such is life.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3413">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">10-03-2004 23:23:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Im thinking i should be the management consultant to make sure England win the next world cup</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3416">
+	<div class="info">
+		<p class="poster">mattboyslim</p>
+		<p class="dt">12-03-2004 09:11:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hoping to finish degree, travel aroung europe then oz hopefully, then find office job in management/accountancy/something in the construction industry/whatever pays well.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3417">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">12-03-2004 12:54:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">why are you obsessed with the construction industry matt?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3418">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">12-03-2004 13:05:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Its where all the money is.<br>
+My housemate just got offered a job with 22k a year for the next two years, going to 30-35 after hes fully trained, choice of company car and cash for a house in birmingham</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3421">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">12-03-2004 13:58:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I say goat chasing in albania is pretty hot right now...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3423">
+	<div class="info">
+		<p class="poster">mattboyslim</p>
+		<p class="dt">12-03-2004 16:30:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I know and understand building, but its only an option, depends where jobs/money are</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3428">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">12-03-2004 18:53:41</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What's all Sam's fault?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3430">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">13-03-2004 09:45:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What ISNT sam's fault?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3431">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">14-03-2004 14:57:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well, indeed.<br><br>
+But what about all the things PRE-SAM...?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3550">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">23-04-2004 14:38:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Short - Finish wapdevil.com and get a HND for it.<br><br>
+Medium - Go Oxford Brookes and get a Software Engineering BSc, with a year out in industry just to make sure that I'm 24 when I finish education.<br><br>
+Long - Join the Army and kill more people than I did when I was in the Navy.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3552">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">24-04-2004 18:07:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Mr_Lenehan wrote:</cite>Long - Join the Army and kill more people than I did when I was in the Navy.</div></blockquote>
+
+what, none?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3555">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">26-04-2004 11:47:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Umm... well I never thought someone was going to take it litterally, but theres always one yeah Alex?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3557">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">26-04-2004 19:52:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">well dave, with you anything can/will/would happen!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

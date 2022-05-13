@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You've won £1000! - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>You've won £1000!</h1>
+
+<div class="post" id="p1858">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">08-10-2003 08:34:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You know those things your get through your door or are in magazines that say 'open to see if you've won £1000! Look for the code' and you open it up and 'OH MY GOD! I'VE WON!!!!!!'. (Surprise - NOT!).<br><br>
+Why do companies do this?  <br><br>
+I had one last night and it says that I have won one of the above prizes and the smallest prize was £50.  I chucked it in the bin, but now I'm thinking I should perhaps have claimed it.<br><br>
+I know they make a lot of money as you have to phone a premium rate line to claim, but this one you could also claim by post and if I sent it from work it would cost me nothing.<br><br>
+I have looked in the small print and cannot see anything, so why are these people doing it?  They won't make any money from me via phone line, so what do they get out of it?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1883">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">08-10-2003 14:30:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Anyone think I should try and claim it then?<br><br>
+I might buy you a beer with it!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1899">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">09-10-2003 11:17:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Go on then claim it. I watched a south today program on those things with some guy from the really wild show presenting it, and they said there is less chance of winnning the lottery than winning on one of those things. You'll get holiday discount vouchers or a photo frame for £10</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1906">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">09-10-2003 11:28:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well it says that I have one of the above prizes and they are all cash prizes, the smallest being £50.<br><br>
+I just wonder if I will start getting shed loads of junk mail or something though!<br><br>
+There has to be something behind it - nothing is free in this world!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1945">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">10-10-2003 12:34:28</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">James is i heard</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1947">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">10-10-2003 12:59:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Okay... I work for bca who get potential customer lists off people who do these cons.<br><br>
+The £50 prize is subject to change without notice. This is not in the small print... why not? They send out full terms and conditions in a separate booklet to the prize winner. However, seeing as no-body actually wins (as the offer gets changed the day before printing by which time it's too late to recall) no-one finds out about the hidden terms and conditions unless they request them through an official channel such as trading standards or citizens advice bureau.<br><br>
+What this means is if you call up, you get logged as a sucker on telephone number: 01793 123456 and then your number sold on to other companies. You then get charged for the privilege, and because the offer has changed before you call up all you'll win is a photo frame or a pen, which you have to pay postage for. Postage and handling is £1.99 (or similar) so they make a profit from that as well.<br><br>
+If you write in, you need to send it recorded delivery to prove they actually received it. And same again, the offer has changed so you'll get a reply telling you that you can claim a pen for £1.99.  If you don't sent it recorded delivery then there was no proof you wrote in so they don't have top reply, but you can be guaranteed they'll add you to their database and sell on the details.<br><br>
+It costs them £1-£25 per 1000 sent out depending on where you got it (example the adver would charge less than the guardian). They can then add you to  list and sell that on to other companies who'll try to ploy you into sending off more fake offers to win prizes whilst hooking you into commitments to purchase a certain item, or number of items.<br><br>
+so feel free to send it in. but if you do be sure to ask for the new terms and conditions first through trading standards, and then send in the coupon by recorded delivery if you think there is anything worth winning. Never phone.<br><br>
+Either way, you've responded to crap so your details are valuable because you're labeled as a sucker – who responds to junk mailings.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1951">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">13-10-2003 08:30:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nah I've chucked it in the bin now anyway - I knew there would be something behind it!<br><br>
+Just fancied getting £50! He he!  Nevermind!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2017">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">19-10-2003 12:27:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've heard of people who responded to those text alerts telling you about winning £150.<br><br>
+It turned out to be vouchers such as "Spend £50 in Virgin Megastores and get £5 off" etc.  Was technically worth £150, but only if you spent about 1000 squid.  And the phone call cost £6 so they're laughing!<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

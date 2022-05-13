@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>News from Mission - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>News from Mission</h1>
+
+<div class="post" id="p2991">
+	<div class="info">
+		<p class="poster">Missionman</p>
+		<p class="dt">19-01-2004 22:06:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well im not sure if any of you will be interested in this but just thought i would share some info i received from a reliable source at the weekend. Mission &amp; Coyote Loco is under new ownership. Coyote will be shuttin shortly and over a 8 week period is being re-styled and re-opened as a strictly over 21's club, but thursdays at mission are likely to stay the same, but other nites are open for review.All i know is they are somehow going 2 make it larger by cutting back on office space. Also they are converting 3 of the empty shops opposite the entrace of coyote into a pre-club type bar. Watch this space !!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2992">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">20-01-2004 12:16:02</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">well i hope the new owners stop lettin 16 year olds in there!<br><br>
+lets hope they can turn mission around, and then maybe one day, it could be a decent club!<br><br>
+first off, they should change the name....i may be wrong, but mission is part of a chain??</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2994">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">20-01-2004 12:48:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">They absolutely need to have a stricter door policy there - the majority of people I know stopped going there because of all the little kids in there.<br><br>
+I guess the situation just got so bad that they have to let the kids in to make money!<br><br>
+Remember when Mission first opened and the word on the street was that it was very difficult to get in?  They even asked for ID to prove you were from Swindon.<br><br>
+I'm not sure if Mission in part of a chain or not.  I have a feeling I've heard the 'Coyote Loco' name before, but the only Mission I know of is our one.<br><br>
+What is the point in making the place bigger?  There's not enough people to fill it as it is!  Mind you, saying that Coyote does seem to be busy most of the time.<br><br>
+What Mission needs is to be update a little - not a complete refurb, but new carpets which don't smell of sick/cheesey feet, a lick of paint, new dance floor etc.  It needs to be given a touch of class to keep up with the rest of Swindon - Mission has been open at least 6 years now I think - it has had nothing like this done it all that time.<br><br>
+How is Mission meant to keep up with classier places such as The Apartment in the state that it is?<br><br>
+I think it could do with a bit of decorating and a new name - plus a nice classy pre-bar might help.  <br><br>
+Then the developers will just have to keep their fingers crossed that it doesn't go down the same route as D&amp;D!<br><br>
+At the end of the day, people will go to the popular place at the time - Mission used to be the 'in' place, it's just not anymore.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2995">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">20-01-2004 16:53:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mission isnt a chain, it's run by a bunch of pikeys who need to be shot. I doubt what Mission man is saying is true, sounds like another one of those stories. "oooh mission is closing down". <br><br>
+Its simple how to make it better. NO UNDER 18s, make it less stinky and the big one... <strong class="text-strong">Variation</strong>. Change the songs for fucks sake! Dont play any of that shitty Gangsta Rap and slap in some new tunes now and then. <br><br>
+Its just cheap shitty fuck twats who go there now. They need to be pushed back down to with the rest of the scummers. <br><br>
+No offence to anyone there.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2997">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">20-01-2004 19:57:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The main problem isn't that it's not classy... it's that there's no reason to go there.<br><br>
+It used to be that it was fun and cheap. Well, there are cheaper places now and the quality of the music etc has really gone down hill. They need to decorate, I agree, but a yuppy venue is no good; it should target the 17-22 audience, most of whom have no money. Thursday nights need to be improved by me going there again.<br><br>
+Perhaps some kind of beer on tap? Real Ale? That'd be a good reason to go... on a dance floor with a tankard of 6X... Ahhhh<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2999">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">20-01-2004 20:32:50</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">6x would be so funny ! It would attrect the steam railway regulars for after pub pints  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3028">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">22-01-2004 22:12:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Is there any need for such a strict dress code every night?  Maybe one night they could let a more 'casual' crowd in.<br><br>
+It's ridiculous that I couldn't get in wearing a t-shirt and decent trainers, but I could get in wearing a wide-boy Sherman shirt and Burberry cap!<br><br>
+Certainly more musical variation is important.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3031">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-01-2004 02:05:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nice avatar Sam!<br><br>
+The dress code is stupid; I forgot about that!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3073">
+	<div class="info">
+		<p class="poster">mattboyslim</p>
+		<p class="dt">30-01-2004 09:50:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">mission is still good, but make a bit more studenty, less townie and place some ew tunes, they have 2 rooms use them! shit music in one place some better tunes elsewhere, i wanna reach for the lasers.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3074">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">30-01-2004 09:58:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What's your name? What have you had? Reach for the lazers safe as fuck  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3075">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">30-01-2004 11:44:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">hahahahahahaha yeah not in mission!!!<br><br><br>
+up all night!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3106">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">03-02-2004 19:20:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mission is a chain.<br><br>
+Entertainment Lesuire Services. Mission, Route 66 and Cyote's. They also run a fair few doorman firms in Manchester and London.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kathy? - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Kathy?</h1>
+
+<div class="post" id="p2013">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">18-10-2003 10:35:10</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Why do you want to be like Mike?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2014">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-10-2003 10:41:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">she told me to write "cause he is the bestest"</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2015">
+	<div class="info">
+		<p class="poster">ka74ryn</p>
+		<p class="dt">19-10-2003 11:25:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">confused.....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2018">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">19-10-2003 14:24:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I just thought that, in the <a href="http://www.drunkit.com/php/pollspy?id=latest" class="postlink">poll results</a> you said you were Mike...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2019">
+	<div class="info">
+		<p class="poster">ka74ryn</p>
+		<p class="dt">19-10-2003 21:26:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">hehe!<br>
+well... i dont go out on a thursday much... mostly cos student night is weds or fri...<br><br><img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"> anyhow - like mike said, he is the bestest!!!<br><br><img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2021">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">20-10-2003 12:29:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What humourous substitutes can replace eyes?<br><br>
+I thought of:<br>
+Pies<br>
+Guys<br>
+Trys<br>
+Flys<br>
+Gaylord</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2023">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">20-10-2003 15:13:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Well theres someone im crossing off my birthday list!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2029">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">21-10-2003 11:09:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">mike the:<br><br>
+great<br>
+fantastic<br>
+sexy<br>
+lovely<br>
+boy who wants to invite bob to his birthday</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2038">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">21-10-2003 12:03:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I can't believe my girlfriend said mike was the bestest.<br><br>
+Thats just fucking rude</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2039">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">21-10-2003 12:07:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Almost as rude as that  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2040">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">21-10-2003 12:08:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm not particularly objecting to the fact its you<br>
+just the fact that my own girlfriend placed any man above me in order of quality</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2041">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">21-10-2003 12:10:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ok   <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br>
+Maybe your the bestestest tho</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2042">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">21-10-2003 12:11:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I thought all women placed Mike above their own boyfriend?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2047">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">21-10-2003 17:03:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If they don't, I've heard Mike can get quite scary...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2053">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">22-10-2003 10:46:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My girlfriend said he has lovely eyes</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2058">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">22-10-2003 12:38:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Do you think he has got lovely hair Bob?    <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2072">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">22-10-2003 19:08:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ace of Base...<br><br>
+Eyesaw the Sign...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2076">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">23-10-2003 09:55:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nice one matt! Classic. <br><br>
+How about - <br><br>
+Vanilla eyes - eyes eyes baby</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2084">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">23-10-2003 12:28:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nas - if Eye ruled the world...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2087">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">23-10-2003 12:34:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Dont get it. <br><br>
+Queen - i want to ride my b-eyes-ical</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2091">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-10-2003 16:20:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Does it not bother you, Jez, that a thread with your girlfriends name as the title has more posts than a thread with your name as the title...?<br><br>
+Eye like to move it - Reel2Reel baby!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2092">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-10-2003 17:52:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Vanilla eyes eyes baby. <br><br>
+Lucy in the eyes with diamonds<br><br>
+Rappers del<strong class="text-strong">eye</strong>t</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2093">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">23-10-2003 18:18:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Good one james very original there!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2095">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">24-10-2003 08:47:28</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Bob wrote:</cite>Nice one matt! Classic. <br><br>
+How about - <br><br>
+Vanilla eyes - eyes eyes baby</div></blockquote>
+
+Do you not think that you have stole one there james you tosser?<br><br>
+m-eye-cal jackson - man in the m-eye-irror</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2096">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">24-10-2003 08:51:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2111">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">24-10-2003 11:41:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What was wrong with mine then bob?!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2115">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-10-2003 12:03:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Eye-ve got the key<br><br>
+Eye-just called to say I love you<br><br>
+... How much fun can we have???</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2121">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">24-10-2003 17:27:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">lots</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2123">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-10-2003 17:46:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Eye know!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2124">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">25-10-2003 18:21:40</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Eye shot the sheriff</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2131">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">26-10-2003 21:43:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Vanilla eyes - eyes eyes baby</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2132">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">26-10-2003 22:24:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Oooh Baby, eye like it like that...<br><br>
+Pulp, common pupil...<br><br>
+Maybe not.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2133">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">27-10-2003 09:50:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Pr-eye-mal scream - swastika eyes</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2139">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">27-10-2003 12:45:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mike and James, cant you fucking read! Vanilla eyes is my one and your not taking the credit. <br><br>
+I enjoy the ones which arnt just simply replacing "I" with "Eye" like "pr-eye-mal scream" Classic. And common pupil was genius.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2145">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">27-10-2003 13:17:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Vanilla eyes is my favourite because I came up with it.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2146">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">27-10-2003 13:53:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just like the old "pia pressure" joke eh? absolute wanker!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2152">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">27-10-2003 16:48:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Vanilla eyes - eyes eyes baby</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2169">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">28-10-2003 15:47:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Stop it you cocks. <br><br>
+Vanialla "eyes" - "eyes eyes baby"<br><br>
+Good one eh?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2171">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">28-10-2003 16:27:09</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Almost as good as mine!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

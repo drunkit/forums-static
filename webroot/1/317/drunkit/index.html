@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drunkit - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Drunkit</h1>
+
+<div class="post" id="p1815">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-10-2003 10:13:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">How did the name 'Drunkit' originate and why was this name chosen?<br><br>
+Were any other names considered? If so, what were they?<br><br>
+(Yes I am bored.)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1821">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">07-10-2003 11:15:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Matts GP is called "Dr Unkit" and when matt was diagnosed with alcohold poisening Dr Unkit saved his life so matt dedicated this site to him.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1830">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">07-10-2003 12:07:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I wonder about you sometimes Bob.....    <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1832">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">07-10-2003 14:30:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Its the truth! Ask anyone</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1850">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-10-2003 16:52:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Note: This started as a quick answer, but quickly turned in to a lengthy history of Drunkit... Sorry! I'm not known for my short, punchy replies!<br><br>
+Mike and I were thinking one night about setting up a site reviewing drinks and night life in Swindon. At the same time, there was a company called freenetname who gave away free domains. Being interested in this prospect, Mike and I decided it'd be cool to get a site going. Thus became the birth of the original Mission Review. Surprisingly, some people actually found it funny and over the next few weeks, more content was added and people drifted in and out of the site.<br><br>
+At this point, Mike and I realised that a domain name would be cool. <a href="http://www.drunk.co.uk" class="postlink">www.drunk.co.uk</a> and similar were all taken. But we didn't want to be restricted to being drunk. Instead, we'd prefer to proudly state that'd we'd "drunk it" before anyone else had. Hence <a href="http://www.drunkit.co.uk" class="postlink">www.drunkit.co.uk</a>!<br><br>
+The early days on drunkit.co.uk were interesting. Few people visited, except for James and Alex Dean. Mike and I visited occaisionally, but it was these two that kept the original guestbook going. The guestbook, of course, wasn't the best place for conversation and we realised quickly that some kind of messageboard was needed for drunkiteers to post on and share their views. Not knowing much about web programming, I downloaded a script from the net and heavily modified it to work with Drunkit. Thus was the birth of the original messageboard.<br><br>
+As time moved on, I was being emailed a lot of articles, which I had to edit and turn into the correct code to put on Drunkit. I then had to alter each file on Drunkit manually to reflect the new articles. This was a tedious process and often resulted in articles not being put up for a week after I recieved them. This made people frustrated and I realised that if this was automated, it'd save me a lot of work and would encourage more members to post their own Drunkit content.<br><br>
+The birth of the article system was a slow one. I accredit this to the fact that people were leaving for university at the time and therefore were more interested in getting drunk than writing about it. In time, however, this changed. Bobby's 'Big Bournemouth House' reports and Sam's ski-tales quickly livened up the site and more people were encouraged to post articles. At this point, the numbers of contributors peaked and some of the finest articles this site has seen were produced (such as Lizzie/Mikes birthday, the largest round in mission history, new years eve etc). In this vein Drunkit continued for a good few months, until April 2002, where disaster struck. The server on which Drunkit was hosted died. To make matters worse, the backup copies were damaged too in a hard disk failure and Drunkit was very actually dead. It seemed.<br><br>
+This was until January 2003, when I decided enough was enough and that Drunkit should return! Bigger, better and badder than before. While that's not yet happened (indeed, the whole article system is dissapointing compared to what it used to be like - as well as the general number of submissions; including their inspiration), Drunkit is constantly getting cooler. The message board was finally replaced from a tree-styled sounding board into a forum, while keeping the general Drunkit look and feel. In the future, Drunkit is set to undergo a major overhaul of the interface (lets face it, while functional, it's pretty ugly!) as well as a <a href="http://forums.drunkit.com/portal/" class="postlink">tighter intergration with the forums</a>.<br><br>
+All in all, the future's looking quite good for Drunkit <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1852">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">07-10-2003 21:01:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">ahhh...brings back memories!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1855">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">07-10-2003 22:35:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">so it does deano. <br><br>
+I miss our pointless things.<br><br><br>
+Hello<br><br><br>
+hi<br><br><br><br>
+who are you<br><br><br>
+dunno<br><br><br>
+great<br><br><br><br>
+etc</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1856">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">07-10-2003 23:18:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i loved it...good old day when drunkit was well random and mike had flies in his pants!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1863">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">08-10-2003 10:12:29</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Happy happy memories. If only there was some magical way of bringing the whole lot back. I still dont believe its gone - the whole lot is floating around out there somewhere waiting to be looked at again.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1868">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">08-10-2003 10:32:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I believe so too - it must be out there somewhere, it can't just be gone like that.  <br><br>
+(God talking about grieving! He he!)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

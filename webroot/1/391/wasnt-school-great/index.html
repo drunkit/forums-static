@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wasn't school great? - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Wasn't school great?</h1>
+
+<div class="post" id="p2385">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">14-11-2003 15:38:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Come on it was brill wasn't it?<br><br>
+Playing football with your mates every day. Messing about, singing dancing and having a gay time. <br><br>
+Tell me some stories from school...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2386">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">16-11-2003 11:51:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Fine it was shit then</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2387">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">17-11-2003 02:52:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My school was great until about year 8/9, when some weirdo who'd lived in America (after living in britain for a while) came and ruined everything.<br><br>
+Was a sad day and everyone still gets quite upset.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2388">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">17-11-2003 12:38:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">My best bit of school was playing football every lunch time and then coming back to school after it had finished for some more football. And we are all still shit at it!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2390">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">17-11-2003 13:06:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Nah we're great. I wish we still played loads of footy. Maybe in 5 years when you've all got jobs and I am still a student we can play every day after work. That would be sweet. <br><br>
+Still waiting for either the firestation or Southampton review bo0b</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2394">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">18-11-2003 12:31:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">at the mo i just havn't the time for writing</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2408">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">18-11-2003 18:23:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">you mean you stepped on your lap top so you cant write? <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Big Grin"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2410">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">18-11-2003 21:44:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Or maybe he means he hasnt had time  <img class="smilies" src="../../../images/smilies/icon_idea.gif" width="15" height="15" alt=":idea:" title="Idea"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2429">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">20-11-2003 11:03:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Both actually. And i LEANED on my laptop to crack the screen, not stepped</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2430">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">20-11-2003 11:31:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">oh leaned. Im sure your mother will be a lot more happy with leaning.  <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2431">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">20-11-2003 12:27:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mum was ok about it actually. Im so pissed off though. I think im the stupidest person i know!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2435">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">20-11-2003 16:52:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'd second that.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2468">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">23-11-2003 13:07:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">School was fantastic.<br><br>
+Dinner ladies, jumpers for goalposts, fights behind the Spa after school!<br><br>
+Some legends went to Commonweal - let's all name one!<br><br>
+For starters I'll name Mickey Moody.<br>
+Climbed up the pipes in the changing room, fell headfirst onto a stone floor from a height of about 10 feet then got up!<br>
+Used to headbutt tables for fun.<br>
+Finished his GCSE history exam in about 10 minutes then spent the next 1 hour 20 rhythmically tapping his pen on his teeth.<br><br>
+Crazy days!<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2478">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-11-2003 17:20:02</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What about tom gregory and his long list of everyone he was going to beat up? What a nice fellow he was. I hope hes rotting in a heroin filled shit hole.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2479">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-11-2003 17:51:59</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Last I heard, he was doing time...<br><br>
+I wonder where the great all-time reprobate Shaun Lennon went to..?<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2481">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">23-11-2003 18:35:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Was that guy violent? I remember many years ago someone i think called 'lennon' went awol from his own school and had a grudge for losing to us at football, and taking a kicking from someone on our team in the process.  Teachers were going round with sticks searching the grounds for him and the guy that hit him was locked in a room with PE teacher guards.  It was the best day of my school life  <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2483">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">23-11-2003 19:08:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah Shaun was a cock. He beat up Iain Crosbie when we left school. What a fag. <br><br>
+Mike I think Ive asked you this before but do you know Seamus McKeown? I think he went to your school. He's funny. Reminds me of Lurch from the Adams Family.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2484">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">23-11-2003 19:17:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yes I know of the man</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2489">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">24-11-2003 12:11:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Tim Little was always a charater - <br><br>
+One of the greatest commonweal moments (which is still recited today by a few people) was just before we were going to play football.....<br><br>
+Bob: "Alright tim, what are you doing after school today"<br><br>
+Tim: "You know, ill go home, have a bite to drink.............."<br><br>
+Classic!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2500">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">24-11-2003 14:07:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Tim Little:<br>
+"I was so proud when we boo'd during the French national anthem. They deserved it for not letting us have some friendly fights"<br><br>
+Quality guy.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2507">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">24-11-2003 17:06:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">tim little still owes me money....i'll never forget</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2556">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">29-11-2003 01:28:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It's great bumping into old school people in Mission or the Steam.<br><br>
+Peter Cullingford is always a classic spot.  Remember when we met Lance Newton, who proudly showed us his tattoos!<br><br>
+Met John Beale in Mission before as well.<br><br>
+Hoping to meet some more randoms at Christmas.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p2619">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-12-2003 19:24:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I went to a different school to most of the rest of you, as you might remember, but it was pretty fun, mostly due to its general riot mentality.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

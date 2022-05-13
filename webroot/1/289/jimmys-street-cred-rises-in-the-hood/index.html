@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jimmy's street cred rises in the hood - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Jimmy's street cred rises in the hood</h1>
+
+<div class="post" id="p1631">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">24-09-2003 10:48:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">In accordance with section 1 of the road traffic offenders act 1988, notice is hereby given of the intention to take proceedings against the driver of the motor vehicle identified below.<br><br>
+on 25/08/03 at 11:47 on a338 Wessex Way Bournemouth@Cooper Dean RBT, Westbound for the alleged offence of exceeding 50Mph Speed limit.<br><br>
+Recorded speed: 73Mph<br><br>
+A penalty of £60.00 and 3 point endorsement on your driving license.<br><br><br>
+I'm so cool.  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1633">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">24-09-2003 11:09:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">3 points eh! Ive got 7</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1638">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">24-09-2003 11:30:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">He he!  Oh dear!  Naughty Jimbo!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1676">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">29-09-2003 11:04:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I've finally found my driving license. now i have to make the long walk to the end of the street to post it  <img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1688">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-09-2003 11:42:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Shameus<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1690">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">29-09-2003 11:43:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Make sure you don't lose it in the hedge!!!  <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1709">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">29-09-2003 15:31:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">my pal's pal's pal was driving home from work one day along a quiet road and he slowed as he approached a speed camera, but it still snapped him. <img class="smilies" src="../../../images/smilies/icon_mad.gif" width="15" height="15" alt=":x" title="Mad"><br><br>
+Being in no hurry he reversed back past the speed camera and went through again even slower this time.  <img class="smilies" src="../../../images/smilies/icon_confused.gif" width="15" height="15" alt=":?" title="Confused">  Once again it snapped him so he reversed for a final time and crawled through at about 5mph with it snapping him again.  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy">  After this he just carried on home. A few weeks later he got three envelopes through the door fining him for driving without a seat belt!   <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"><br><br>
+Probably not true but its a great story if it is!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1711">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">29-09-2003 21:22:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">you never heard of not signing the NIP loop-hole.??....personally i didn't have the guts to try it and signed the form and a cheque for £60 and posted it....my cash was probably wasted on another speed bump my car can't get over!<br><br>
+speed cameras bloody every where!!!! i hate the ones they have in the back of vans the most! pure fleecing</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1713">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">30-09-2003 09:08:14</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Its as likely to be real as the old trick of sending £60.01 and not cashing the penny cheque they return to you.  Legally they are not meant to be able to take your money unless the exact amount is settled</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1714">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-09-2003 09:48:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Surely they have already taken the £60 when they refund the £0.01 though?<br><br>
+If you decide not to cash the cheque then that is your own problem as they will have it on record that they have sent you it?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1715">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">30-09-2003 10:15:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It might never have arrived? damn post!<br>
+Its a wives tale as far as im concerned anyway  <img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1716">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-09-2003 10:27:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But from their point of view, if an auditor was to look at their accounts they would see a cheque was made out to the driver.<br><br>
+If the driver said they had never received it, they could easily cancel the old one and reissue a cheque and send by recorded delivery.<br><br>
+I'm pretty sure it is!  It would never work!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1717">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">30-09-2003 13:40:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Remeber the intellect of your average copper tho</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1721">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">01-10-2003 09:01:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">legally they can't apply the points until all financial transactions are complete<br><br>
+btw mike, watch out for the M4...specs has gone live......c*unts</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1722">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">01-10-2003 10:48:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">They will make a fortune from that, i did 75-80 all the way back to reading and was the slowest car on the road</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1723">
+	<div class="info">
+		<p class="poster">Alex D</p>
+		<p class="dt">01-10-2003 13:41:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">do what i do, take the licence plate off the front of the car!!  i'l burn in hell one day</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1725">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-10-2003 18:50:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">You can get special paint that makes the numberplate perfectly legible normally, but illegible if photographed.<br><br>
+That'd be neat.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1730">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">02-10-2003 09:44:41</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Cool, I'd love to get my hands on a tin of that!  (Not that my car goes that fast anyway!!)<br><br>
+I'm convinced some cameras just flash and have no film in anyway.  I got flashed last summer when I was in Hemel Hempstead doing 50mph in a 40mph - never had anything for it!<br><br>
+I was doing at least 80-85 all the way down the M25 on the way there too and theres loads of them on there!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

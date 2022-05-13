@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drunkit needs YOUR help - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Drunkiteering</a></p>
+</div>
+
+<h1>Drunkit needs YOUR help</h1>
+
+<div class="post" id="p1669">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">28-09-2003 23:27:41</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Drunkit is in financial difficulty.<br><br>
+We have one of three options:<br><br>
+a. Help Matt raise the £70 needed to keep Drunkit free and going for another year.<br>
+b. Put some form of advertisement on the site and hope that it raises £70 for Drunkit for another year.<br>
+c. Don't put any money in and not have Drunkit any more<br><br>
+Basically, I have to pay £70 by January 5th 2004. I cannot realistically afford this. As much as I would like to pay for Drunkit again, I have personally paid for it for over four years now - including putting in 90% of the work and 100% of the money. I simply cannot afford to do this any more.<br><br>
+How can we help?
+<ul><li>By putting in £5 you can really help keep Drunkit alive.</li>
+<li>£10 will almost certainly guarentee a new Drunkit</li>
+<li>£20 will Decidedly rescue Drunkit</li>
+</ul>
+Before you dismiss this as a plea for money, let me put it to you in these terms:<br><br>
+First of all, I have never asked for money before. All of Drunkit has been paid for out of my own pocket. This includes the original £100 set up fee. I have never asked, nor recieved any form of profit or income from Drunkit, nor do I wish to make one.<br><br>
+Secondly, £10 is 60p a week. You spend more than that on a single drink in Mission on a Sunday. If you've been visiting Drunkit since the start (about four years now), that's 5 pence a day. On the assumption you visit three times a day, that's just over two pence for every visit - which probably brings you joy.<br><br>
+Thirdly, many people rely on Drunkit to keep talking to their friends etc. The scope is wider than the regular members. Many non-active people visit Drunkit frequently. They deserve a say too.<br><br>
+On these points, I hope you will find compassion in the need for Drunkit to continue. This is not sudden and indeed you may wish to bestow some money on Drunkit as a Christmas present.<br><br>
+If you think you can get hosting for cheaper than £70 a year (which is very reasonable), that's fantastic. However, Drunkit must have:
+<ul><li>At least 5gb bandwidth a month</li>
+<li>At least 200mb disk space</li>
+<li>The ability to have 50+ subdomains</li>
+<li><strong class="text-strong">Full</strong> CGI (Perl 5+) Scripting and <strong class="text-strong">full</strong> PHP (4.1.2+) support</li>
+<li><strong class="text-strong">At least</strong> five databases (MySQL <strong class="text-strong">strongly</strong> prefered)</li>
+<li>Full access control via ftp (ssh/telnet desired, but not required)</li>
+<li>IMAP (or, less desirably) POP3 email support -- with the ability to include at least 10 accounts (preferably more)</li>
+<li>A UNIX based sever running Apache</li>
+</ul>
+
+I do not need SSL security, although it'd be a bonus. The current service we subscribe to is the <a href="http://www.webconexion.net/services/web_hosting.php" class="postlink">WebConexion.net</a> UK bronze hosting package. However, they have increased their prices, but their <a href="http://www.webconexion.net/services/us_web_hosting.php" class="postlink">US Hosting</a> is competitively priced and looks attractive. It also included all the required features.<br><br>
+Essentially, if you think you can help <strong class="text-strong">please, please, please</strong> reply here stating how much you can help by. If you know a cheaper/comparable hosting solution, please tell me. I am keen to stick with this company for now, as their service has been very good. But if cheaper can be found, that takes priority.<br><br>
+Thanks for reading this and I hope you can find it to support Drunkit. Even if you cannot afford to support Drunkit in this way, I thank you for taking the time to read this.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1673">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">29-09-2003 10:58:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hmmmmmmmmmm....<br><br><br>
+Thats a dilly of a pickle...<br><br>
+On one hand I like reading about drunk people<br><br>
+On the other. Its just me talking to Jo, bob and Mike at the moment!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1684">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-09-2003 11:39:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">With that attitude, it's certainly not gonna last very long!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1685">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">29-09-2003 11:40:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I wouldn't mind paying a fiver a year.  It's only a fiver - it doesn't make that much difference and I think most people would be willing to pay that.  I think most people would not be willing to pay £10 a year.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1710">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-09-2003 17:20:49</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Then Drunkit will probably not come back <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1712">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">30-09-2003 08:03:12</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Why not?<br><br>
+There are currently 17 listed members and 14 of those I recognise and think they might pay £5, that is £70.<br><br>
+Or if everyone contributed £7 that is £98.<br><br>
+That's enough to pay the hosting fee and keep it going, then we could have an advertisment or two on the site to help raise some extra funds.<br><br>
+Only thing is, do the advertisers only pay people who have a lot of hits on their websites?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1719">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">30-09-2003 16:45:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'm in for a <strong class="text-strong">fiver</strong>. Its not a lot and I'd spend three times as much on a night out - and I think drunkit is worth it. If everyone chips in just a fiver then it would be enough to keep it going.<br><br>
+I'm not having a go at anyone, but if the top right corner of your browser says "Welcome -xyz-" then you come here enough to chip in a <strong class="text-strong">fiver</strong> at least, and shame on you if you won't.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1726">
+	<div class="info">
+		<p class="poster">jim</p>
+		<p class="dt">01-10-2003 19:10:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Just came across your site after looking around a few premium lager sites <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br>
+At £70 a year for what you need it sounds a bit expensive,<br>
+Id be happy to host you for nothing <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1727">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">01-10-2003 22:02:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Jim you have the same name as me. We're like brothers man. <br><br><br>
+email me about hosting the site. Im the main man around here. ill get in contact.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1728">
+	<div class="info">
+		<p class="poster">jim</p>
+		<p class="dt">02-10-2003 08:47:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">E-mail sent <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":D" title="Big Grin"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1729">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">02-10-2003 09:40:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Jimbo - I'm sure Matt will be pleased to hear you saying that!  Exactly how much work do you contribute towards Drunkit?!?!   <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1736">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">02-10-2003 12:16:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The less work I have to do... the better!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1772">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">06-10-2003 11:38:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">So what's the deal?  I'll happily pay £5 a year, but not if this Jim dude does it for free!<br><br>
+Matt, if you need a few squid, tell us how to hand it over!<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1778">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">06-10-2003 12:11:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What I want to know is, who is this Jim dude and why does he want to host drunkit for nothing?!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1782">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">06-10-2003 12:22:55</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It wasn't me</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1785">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">06-10-2003 12:26:41</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Did you get his e-mail?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1788">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">06-10-2003 12:42:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">yes I did! forwardeded it to matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drugs are bad, mmmmmmmmkay? - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Drugs are bad, mmmmmmmmkay?</h1>
+
+<div class="post" id="p115">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-07-2003 10:11:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">In a time of governmental chaos, what do you all think about the tory policy to force drug addicts in to rehabilitation or send them to jail? A sensible policy, given Labours prison obsession or just a pipe-dream to get more votes?<br><br>
+I think it's a damned good thing, rehabilitation is shown in so many cases to be effective and better for everyone. Instead of sending people to prison at huge expense for many years, only for them to be released back in to society having learned nothing other than more hatred and resentment, we can treat them at similar expense (possibly even less, given the duration of rehab) and then release them in to society to become decent human beings.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p117">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">03-07-2003 16:01:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Drugs are a victimless crime, there is a lot of crime associated with drug use though, robberies etc...  The problem is that at the worst end of drug criminals the drugs and the criminal lifestyle become entwined.  In principle its great, but the public will demand some punichment where crimes other than possesion are proven.<br><br>
+Frankly though i think its ridiculous to send somebody to prison for simply being in possesion of drugs.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p118">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">03-07-2003 16:03:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The majority however will not want to be helped but will take the softer option of rehab to escape jail.  This means that they will get shorter 'sentences' and rehab will have little or no effect, as you can only help those that want it and if they wanted it they would be there already!  The result from this would be rehab would have to become more prison like making a mockery of the system, as adicts get released back onto the streets at a faster rate.<br><br>
+I agree that something drastic such as this should be done but i dont think this is the answer.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p123">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-07-2003 22:04:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Prison is the most ineffective way of "solving" crime. You put a load of criminals together and treat them like shit at maximal expense. They don't rehabilitate, nor do they learn. Many just brood in the fact that they were caught, learn more 'tricks' and get outside continuing to live in a society that they quite rightly feel has neglected them and their needs.<br><blockquote class="uncited"><div>The majority however will not want to be helped but will take the softer option of rehab to escape jail</div></blockquote>
+To say this is quite frankly misguided and wrong. Being addicted to drugs is one of the worst things someone can ever get in to. Often they owe money, have lost all their possible pleasures (family, housing etc) and have been punished enough by their own life style. Many don't choose to go down that path either, but are simply too ignorant thanks to an elitist education system that relies on middle class values.<br><blockquote class="uncited"><div>the public will demand some punichment (sic) where crimes other than possesion are proven. </div></blockquote>
+Do we not live in more enlightened times than trial-by-Mirror? Where the public's general opinion decide the matter of the individual. The point of the government isn't to do what the public want, but what is best for the public. Most people who have been in to drugs have been punished enough. Let us not go on witch hunts and have a government that's only accountable to the tabloids.<br><br>
+Rehab isn't just about "releasing addicts on to the street" anyway. It's about first of all putting them on compulsery bail -- possibly even tagging them for curfew. It is not also about removing the addiction. That is the first step. It is about re-integrating them back into society and giving them all the chances they should get. Prison is a future option, but it should never be the first one. You can hardly fine down-and-out druggies or dealers anyway, as they either can't afford it and will have to turn to more crime later to get their fix, or they can afford it and will sell more drugs to pay for it. Rehab is the only sensible option other than prison.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p128">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">04-07-2003 14:40:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Quote: <br>
+The majority however will not want to be helped but will take the softer option of rehab to escape jail <br><br>
+To say this is quite frankly misguided and wrong. Being addicted to drugs is one of the worst things someone can ever get in to. Often they owe money, have lost all their possible pleasures (family, housing etc) and have been punished enough by their own life style. Many don't choose to go down that path either, but are simply too ignorant thanks to an elitist education system that relies on middle class values. <br><br>
+Sorry could you explain for dumb old me why you dont think rehab is a soft option.  I couldnt understand the argument  <img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"><br>
+I was also insulted at being told im misguided and wrong.  I did say i wasnt into political issues but i had a go just to give an opinion and i was abused for it  <img class="smilies" src="../../../images/smilies/icon_cry.gif" width="15" height="15" alt=":cry:" title="Crying or Very sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p129">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">04-07-2003 14:45:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I was not insulting you, I was simply saying that your view that people would rather rush in to rehab and then back on to drugs than get treated and make something out of their lives is wrong <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>
+Always state your opinion, as someone will no doubt claim I am frankly wrong and misguided <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";-)" title="Wink"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p645">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">02-08-2003 22:56:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The basic line is that quite frankly, the Tory polisy (whatever anyone thinks of it) would never work.<br><br>
+You can't put every addict in prison (there isn't the space or the money) and you can't force people into rehab, people won't do what they don't want to do, and it's too costly. There aren't even sufficient resources for everyone who <em class="text-italics">wants</em> treatment to get it at present-in some areas of the country waiting lists for heroin addicts wanting to go into rehab are 6 months long and more, and that's a long time for someone in such a dangerous state.<br><br>
+Also, what is being meant by 'drug addicts' here, and where do you draw the line? People with major narcotic abuse problems are without doubt putting themselves at risk and a problem for the rest of society, but the first death from cannabis is yet to be recorded. On teh other hand, tobacco and alcohol abuse kills thousands a year.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p653">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-08-2003 11:34:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Er, that's a little naive Alex.<br><br>
+The main illnesses associated with tabacco are to do with Cancer. It is the same with Cannabis. They are therefore at least equally as dangerous, as many mix with tabacco, creating a nicotine addiction and a cannabis dependancy.<br><br>
+It is simply wrong to state that there are no deaths related to Canabis. Unless you can back that up with some form of evidence, I have the following to say to you:<br><br>
+First source: <a href="http://ideas-canada.ca/medmj/cancerthreat.htm" class="postlink">http://ideas-canada.ca/medmj/cancerthreat.htm</a><br><br>
+Second source: <a href="http://www.guardian.co.uk/drugs/Story/0,2763,947714,00.html?=rss" class="postlink">http://www.guardian.co.uk/drugs/Story/0 ... .html?=rss</a><br><br>
+Third source: <a href="http://area51.upsu.plym.ac.uk/infoserv/drugs/graphical/dopedang.html" class="postlink">http://area51.upsu.plym.ac.uk/infoserv/ ... edang.html</a><br><br>
+Fourth source: <a href="http://news.bbc.co.uk/1/hi/health/2419713.stm" class="postlink">http://news.bbc.co.uk/1/hi/health/2419713.stm</a><br><br>
+I know that's a lot of links, but they took me less than one minute to find and collate. There is a <strong class="text-strong">strong</strong> and <strong class="text-strong">real</strong> risk of cancer! Don't let any pot-smokers fool you otherwise.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p747">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-08-2003 21:48:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ok, this may turn out to be a rather long and rambling reply...!<br><br>
+I did not say that Cannabis isn't a danger to health-it is, but please note also that when I said the first death from Cannabis was yet to be recorded, I did not say Cannabis <em class="text-italics">smoking. </em> It?s patently obvious that if you smoke Cannabis, you usually do so with tobacco, and are therefore going to suffer the same health problems as tobacco smokers, if not greater ones, since you are less likely to use a filter since this takes out a lot of the THC- delta-9 tetrahydrocannabinol, the 'active ingredient' in Cannabis- and therefore pretty much negates the point of smoking it. If you smoke something that?s carcinogenic, of course there?s a real risk of cancer!<br>
+My point was that Cannabis by itself (not smoked) is very unlikely to kill you.<br><br>
+The question raised about the potentially fatal effects of Cannabis, which are not solely linked to smoking (and therefore are up for serious consideration in relation to my statement) is that of THC. <br>
+Your third article (from The Guardian) says:  <br><br><em class="text-italics">'It had a marked effect on heart and blood vessels and sudden deaths had been attributed to cannabis smoking.'</em><br><br>
+This would indicate that the only data available to them was from experiments involving THC levels inhaled in smoke. <br>
+There are an awful lot of things in smoke that can lead to sudden death, and I'd be interested to know how they measured what was the effect of the THC as opposed to anything else, though presumably these people are scientists and know what they're talking about. <br>
+I've tried and failed to find anything on the effects of THC in regular users who are non-smokers-if anyone else has any luck please let me know. <br><br>
+There is of course the question of mental health issues related to Cannabis use. <br>
+Anyone can tell you that it causes short term memory loss, though this fortunately isn't fatal (or I'd be long dead given my memory problems!)<br>
+Serious mental illness occurs in a very small fraction of long term users, though it's generally deemed an exacerbating factor of underlying mental illness, rather than the actual sole cause. <br><br>
+Other causes of death? It could be said that people under the influence of Cannabis are more prone to accidents than those who aren't This is probably true, though one of the most famous effects of Cannabis is that it tends not to make you want to do very much, and generally just want to sit around and talk gibberish instead, which keeps a lot of people safe. You certainly never see anyone who's stoned go out and try to pick a fight with someone, the way you do people who are high on other substances including alcohol-it just isn't something that makes you violent or aggressive. <br>
+ As for road traffic accidents, although Cannabis effects reaction times, since the majority of people don't drive when stoned it causes far fewer accidents than other drugs, particularly alcohol, and even less than sleep deprivation.  <img class="smilies" src="../../../images/smilies/icon_eek.gif" width="15" height="15" alt=":shock:" title="DEFINITELY Mike"><br><br>
+You said that your articles took less than a minute to find and collate-can I ask, did you read them before posting them? <br><br>
+ I ask this because only the fourth really supports what I think you were trying to say to me (although my argument had nothing to do with smoking). <br><br>
+The first actually negates your argument, since it is pointing out the inaccuracies of another article saying that smoking Cannabis IS a major health risk!  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br>
+The second speaks hypothetically: <br><br><em class="text-italics">?If the health effects were the same, the corresponding figure from 3.2 million cannabis smokers would be 30,000.?</em><br><br>
+The third also actually supports my argument, since although it says that:<br><br><em class="text-italics">?Smoking any substance over a long period of time is a bad idea and frequent breathing in of Cannabis smoke can lead to bronchitis and other chest related disorders and may cause lung cancer.?</em><br><br>
+It states earlier that:<br><br><em class="text-italics">?There is no conclusive evidence that long-term use of Cannabis causes lasting damage to physical and mental health.? </em><br><br>
+(I am making the assumption here that they are talking about Cannabis itself here, rather than smoking it, since they go on talk about smoking it later in the article.)<br><br>
+Given the contradictions and wide-ranging views held in these articles-even though they are supposed to be all arguing the same basic point-that smoking Cannabis is bad for you, which wasn?t what I was disputing- I?d say the area of deaths from Cannabis use is a fairly hazy one. In reply to the fourth article someone said that the government website for death certificates (or similar) had registered there being seven deaths last year ?from Cannabis? (though I suspect these have been attributed to Cannabis smoking, and therefore tobacco probably also had an impact) and that this is still less than from nut allergies. <br>
+It?s also less than the number of people a year who die from cracking their heads on the toilet when throwing up! <br>
+I?ve not checked up on his reference, and although I accept that I may have been wrong to say that the first death from Cannabis was yet to occur (my reference for this was probably between 4 and 8 years old) the essence of my previous posting was that there?s a dramatic difference between types of drug addiction, and I stand by that. <br><br>
+I personally don?t agree with Cannabis smoking. Like all forms of smoking, it?s antisocial, bad for you and you inflict it on others around you who have chosen not to smoke. <br>
+I?m not a big fan of Cannabis use in its other forms either to be honest- a very stoned person is about as boring as a very drunk person to someone who?s completely sober. These are just personal opinions though, I know that other people feel differently (and I suspect that if this thread continues we?re likely to hit the legalisation debate!) <br><br>
+As an interesting aside though, one which I?m not sure what to make of, I know med students who will take (not smoke) Cannabis and Magic Mushrooms, yet not touch alcohol because (and I quote) ?it?s fucking bad for you, man!?  <br><img class="smilies" src="../../../images/smilies/icon_cool.gif" width="15" height="15" alt="8)" title="Cool"><br><br>
+(incidently, thanks to anyone who actually reads down this far!) <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p748">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">07-08-2003 21:54:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i scrolled down to the bottom to read the conclusion. <br><br>
+Thats ok, i read all the way!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p753">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">07-08-2003 22:19:19</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Alex B wrote:</cite>the first death from cannabis is yet to be recorded.</div></blockquote>
+
+The keyword here is 'from'. It is too ambiguous to justify, as a lot of cannabis is taken through smoke, which was my point. There is no hint that you wished to avoid the smoking issue. In this, I am justified in my response as your original point was obfuscated. But enough about that.<br><br>
+I actually agree with you per-se that cannabis is "fine" when taken in a medical context such as this. However, I think the social implications of legalisation are far too great to ignore. A lot of people start taking cannabis for no other reason than because it's reputation preceeds it. This is true of smoking as well. It is not because of the medicinal/relaxation/whatever aspects of cannabis, it is because it's cool, it's illegal and it's notourious. Argue this if you will, but I believe an objective study on those you know that take cannabis will reveal that they probably started smoking due to its reputation and it's illegalities.<br><br>
+This, therefore, raises the serious question. Even though some people may have 'legitimate' uses for it, the majority of people probably don't. In this case, they are drawn to the drug by social pressure. However, if cannabis is no longer 'cool' and therefore legalised, there is a real chance that abuse will occur and/or different narcotics be discovered.<br><br>
+My view is that cigarettes and alcohol would probably be banned under modern-day thinking, however, they are so intrinsic within our society that it'd be almost impossible to completely stop people buying them -- protests ranging from jobs to liberties would be formed and international questions about a governemnt's motives started.<br><br>
+Many say pot is no-worse-than or, in some cases, better-than tabacco and alcohol. This does not justify pot, it simply works to show the situation in which sucessive governments are placed in respect to the dangers of alcohol and tabacco.<br><br>
+Tabacco and cannabis (for smoking) are, in my opinion, worse than alcohol, as they are addictive (nicotine), antisocial, unhealthy and selfish. Alcohol is typically a self-harm thing, although those who are intoxicated may turn antisocial. This is the person under the influence. It is not the alcohol that does it, it is the person's brain under the influence of alcohol. The tar in smoked drugs, however, does cause people immediate harm around them; especially younger people and those not used to smoke.<br><br>
+Drunkit is pseudo-anti smoking and pseudo-anti drugs (I make no policies for Drunkit, but no specific content condoning them will ever be put up!). We are of course pro-alcohol, in moderation.<br><blockquote><div><cite>Alex B wrote:</cite>There is of course the question of mental health issues related to Cannabis use. </div></blockquote>
+People who take Cannabis may become dependent upon it in their lifestyle. Whether they need it to releive pressure, need it to relax or whatever. Dependency isn't like addiction, where they chemically need it, it's where their brain paradigms require it for normal function. In this respect, I make the case that there is a huge mental issue. I know a number of dependent smokers and I suspect you know a few yourself.<br><blockquote><div><cite>Alex B wrote:</cite>It could be said that people under the influence of Cannabis are more prone to accidents than those who aren't</div></blockquote>
+This is definitely true. It's also not about people getting up and hurting themselves, it's about people not realising that cannabis + driving = death a lot of the time. We know about drink driving, but I doubt too many are educated on drug-driving.<br><blockquote><div><cite>Alex B wrote:</cite>You certainly never see anyone who's stoned go out and try to pick a fight with someone, the way you do people who are high on other substances including alcohol-it just isn't something that makes you violent or aggressive.</div></blockquote>
+This is because of the nature of cannabis. Alcohol has no strict pattern, hence why people get drunk differently. It serves to amplify the person's inner-nature and the most basic instincts in their head. Therefore, they may well be aggressive, but that is in the person's psychosis and usually you will find those that pick fights are more aggressive in every-day language etc. People on cannabis isn't a good comparison either, as alcohol is consumed in a nightclub, where people are put in a conflict situations. Cannabis isn't consumed in any comparable situation normally and therefore there is no basis for your point that I can see.<br><blockquote><div><cite>Alex B wrote:</cite>I personally don?t agree with Cannabis smoking. Like all forms of smoking, it?s antisocial, bad for you and you inflict it on others around you who have chosen not to smoke. </div></blockquote>
+I agree, however, I think that general narcotics is bad. Cannabis is under that category and therefore I stick by the case.<br><blockquote><div><cite>Alex B wrote:</cite>I?m not a big fan of Cannabis use in its other forms either to be honest- a very stoned person is about as boring as a very drunk person to someone who?s completely sober.</div></blockquote>
+Drunk people are great. Don't knock it.<br><blockquote><div><cite>Alex B wrote:</cite>As an interesting aside though, one which I?m not sure what to make of, I know med students who will take (not smoke) Cannabis and Magic Mushrooms, yet not touch alcohol because (and I quote) ?it?s fucking bad for you, man!'</div></blockquote>
+I think I'd rather not eat mushrooms upon which a cow has shit on!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p781">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">09-08-2003 16:31:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Fair play- I should try to make my point more clearly (no promises though!) but what does 'obfuscated' mean?<br><br>
+The legalisation issue is an interesting one, and although I think you're right that a large number of people initially take Cannabis through peer pressure and that it's status as an  illegal substance may play a part in attracting people, I don't think the 'gateway status' issue can reasonably be extented to include legality-most people don't try harder substances because what they currently use is too 'legal', they do so out of curiosity/tollerance for current substance etc. <br>
+I think the reputation of Cannabis has a lot to do with its popularity. To survery the people I know who take dope probably wouldn't be the most fair way of doing it, since I know a fairly interesting collection of people whose reasons for doing anything are rarely to fit in-maybe a random selction would be better.  <br><br>
+As for dependency-you can become dependant on anything, especially anything which makes you feel good, whether it's going out for drink after work, having a joint before you go to bed, jogging every morning, calling your sister every evening for a chat- the psychological dependedncy on what makes you happy is a personal thing, and varies as much with person as it does with the action/substance/routine. <br>
+The greater the removal from a 'normal' state (the greater the 'escapism value' or the 'high') however, the more likely you are to become dependant upon it (as long as it's something that's accessable-people don't tend to be completely hooked on skydiving, because it's not something that you can do between meetings or after every week) hence dependencies on things like dope and exercise, because they change the chemicals in your brain more dramaticaly. <br>
+Of course I know dependent smokers, but on the other hand, I also know a lot of people who can't get through the morning without a cup of coffee! Things can't be condoned simply because they're habit-forming, whatever other damage they may do. <br><br>
+{ Interesting aside here- electrocution is also highly dependency forming, though not pleasant, to the point where people who are routinely electrocuted prefer it to sex-which is why it was used to treat sex offenders-weird huh? }<br><br>
+Tobacco and alchohol wouldn't be the only things banned-if someone was trying to introduced refined sugar (the orginary granulated stuff) today, it would fail the EC regulations by a long way! Tobacco and alcohol are far too ingrained in our society to be removed (people have tried in the past with varying degrees of success) particularly since we live in a global society more today than ever. It's worth remembering that dope's been around in our culture for almost as long as tobacco though, and only became illegal relatively recently, so I very much doubt it's something govermnets will ever remove either, and in a way, I think what irritates the government most about it isn't that people are acting against the law, or are harming themselves, but that they don't collect taxes from it!<br>
+Perhaps that's being unkind to politicians...or perhaps not!<br><br>
+Actually, your same complaints can be applied to alcohol I'm afraid- addictive, antisocial (leads to antisocial behaviour) unhealthy and makes people selfish, although (fortunetly) it isn't imposed on people in the same way as smoke, and is better in this sense. <br>
+I'm not sure alcohol just exacerbates what's going on in people's heads. It makes quite a lot of people behave in ways they never would sober-all drugs make people loose their self control, the difference is in the degree and direction. <br>
+It's very difficult to compare Cannabis and alcohol in a nightclub atmosphere, because it's illegal to use Cannabis and you therefore don't tend to buy from behind the bar! Most people wouldn't want to use it in clubs anyway-which I think perfectly supports my point.<br>
+Alcohol doesn't just get used in clubs though, and you can therefore compare the two at homes/parties/pubs (comparable with cafes in Holland).<br><br>
+Drunk people/stoned people-it's all a matter of personal taste when you're the sober one in either situation. I've been around a lot of both.<br>
+I'd say they're about comparable for entertainment value until extremely drunk/stoned, when I'd rather look after a stoned person-much less likely to throw up over you! <br><br>
+As for Drunkit condoning drinking <strong class="text-strong">in moderation</strong>....ummm.... pull the other one, it's got bells on! It was set up to celebrate the socially irresponsible practice that is binge drinking, and we love it!  <img class="smilies" src="../../../images/smilies/icon_biggrin.gif" width="15" height="15" alt=":-D" title="Very Happy"><br><br>
+Magic Mushrooms aren't ones that have been shat on by cows! Don't believe everything Mr Shady says!<br>
+Unless maybe it was a magic cow....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p784">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-08-2003 18:18:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><strong class="text-strong">Obfuscate</strong> verb. <span style="font-size:75%;line-height:116%">FORMAL</span><br><em class="text-italics">To make something less clear and harder to understand, especially intentionally.</em><br><br>
+The point is that if I drink 50 shots of beer next to you, the only result you'll get will be me drunk. If I smoke a few joints, you're risking cancer and getting high by no fault of your own. A person's social irresponsibility as a result of smoking isn't the issue - that can be controlled given the right situation, the issue is the social irresponsibility <em class="text-italics">when</em> taking the drug.<br><br>
+Alcohol is not addictive, one becomes dependent upon it, much like cannabis. However, as a society we are far more informed about Alcoholism, and know little about cannabis. We all know about alcohol and its dangers, yet Cannabis is seen as a "safe" drug, that we can smoke as much as we like of with no ill effects. People aren't aware that it's unsafe to take cannabis and drive. It's socially "cool" to get high on Cannabis, you need only walk in to the average teenagers bedroom to find at least one marajuana reference.<br><blockquote><div><cite>Alex B wrote:</cite>Most people wouldn't want to use it in clubs anyway-which I think perfectly supports my point. </div></blockquote>
+Why don't cannabis users want to take it in clubs? Because they have a higher sense of morality? Because their illegal drug taking somehow puts them above the need to smoke in clubs? Of course not! It's simply because the risk of being caught is too high (as it ought to be). It does not prove your point, but mine.<br><br>
+You cannot say people on cannabis are less violent than those who have been drinking, as it is hard to find a comparable situation. Socially acceptable areas in which one may smoke weed are much more narrow than alcohol. You can drink alcohol in Dutch caf?s, yet you may also smoke weed. I'd love to see some proof that the alcohol drinkers there get more violent than the Cannabis smokers. I suspect that neither get violent, as the situation doesn't really call for it. You're confusing the situations and the substance. With this said, I fail to see how alcohol makes people more violent - when surely it's the nightclub/bar that fuels that?<br><br>
+Cannabis is an illegal narcotic and this makes half of its popularity. You say people don't smoke it to fit in? Why did they start? Did they start smoking by themselves in their rooms? Is that how they continue to take cannabis? Or was it because a group of their friends, who also didn't want to 'fit in', were smoking it? I would say that it is the latter. The fact that a group isn't mainstream or in conformance to the social norm does not mean that the members aren't fitting in.<br><br>
+The gateway effect is a massive influence on drugs! Goodness gracious. You go up to someone you don't know on the street late at night and ask to buy crack. You're either insane or a police officer. Either way, you're not going to get a lot. Ask for Cannabis and it's a fairly small fine and it'll just be dropped. The drug world works in a heirarchy, whereby many dealers are in contact with one another. The easiest way to get the harder substances is through someone you know and trust -- therefore Cannabis is a gateway to these products. Without starting with 'soft' drugs, the 'hard' drugs are difficult to obtain. I am not claiming that all cannnabis smokers go on to hard drugs. Not even half of them. But a great many do. At least three people from Commonweal went from 'soft' drugs (like Cannabis) on to much harder stuff. (I shalln't name names, but you surely can think of them!)<br><br>
+You don't become dependent on smoking, You become addicted. Smoking isn't a habbit, it's a drug addiction. Plain and simple. We may use euphemisms to hide this, but it doesn't change the fact that it's addictive.<br><br>
+As for alcohol, allow me to compare the severity of the factors between alcohol and cannabis...
+<blockquote><div><cite>Alex B wrote:</cite>
+Actually, your same complaints can be applied to alcohol I'm afraid- <strong class="text-strong">addictive</strong>, <strong class="text-strong">antisocial</strong> (leads to antisocial behaviour) <strong class="text-strong">unhealthy</strong> and <strong class="text-strong">makes people selfish</strong>...</div></blockquote>
+<ol style="list-style-type:decimal"><li> <strong class="text-strong">Addictive</strong> - Alcohol is not addictive. I am not addicted to it, nor are any of the regular 'binge drinkers' that I know. If they were, I would be concerned and tell them or a close friend of theirs. Nor are they even dependent. We drink far more than the average and yet are fine.</li>
+<li> <strong class="text-strong">Antisocial</strong> - Alcohol is legal, self-harming and it is only the individual that <em class="text-italics">might</em> be antisocial. Cannabis/Tabacco harms those around the consumer if smoked, puts all in the location at legal risk and is harmful to the consumer. The legal issue has massive influence on how social something is. I don't want anything to do with people in posetion of illegal drugs, certainly not on a night out.</li>
+<li> <strong class="text-strong">Unhealthy</strong> - In moderation, alcohol is not unhealthy. Nor is cannabis. In excessive amounts, both will be unhealthy. This is true of anything, however, and therefore a point you could put against fruit juice, vegetables, alcohol or cannabis. I reject it on those grounds.</li>
+<li> <strong class="text-strong">Makes people selfish</strong> - Entirely subjective. Cannabis when smoked is decidedly selfish, as it harms those in the area. Smoking cannabis doesn't <em class="text-italics">make</em> a person selfish, they are already selfish for smoking in the first place! As for alcohol, I know many people who are not selfish when drunk. In fact, as I recall, most Drunkiteers have walked you home to ensure your safety when more than a little drunk! In either case, selfish is an emotional judgement and there can be no clear view on it either way. Of course, if that is your opinion, you are welcome to it, but I do not see it as fit in a debate.</li>
+</ol>
+
+You may dispute that list, but it is simply in response to (what I think) is a misleading set of arguments suggesting Alcohol is as dangerous as Cannabis!<br><br>
+Yes the last statement was supposed to be a Slim Shady reference <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"><br><br>
+Alcohol in moderation is what the Moderators say it should be. Nothing more, nothing less.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p786">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">09-08-2003 20:14:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Moderators 1 Lower beings 0</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3333">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">29-02-2004 01:45:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><blockquote><div><cite>Mike wrote:</cite> The result from this would be rehab would have to become more prison like making a mockery of the system, as adicts get released back onto the streets at a faster rate.</div></blockquote>
+Surely the reason they would be released is because they were no longer addicts? Therefore not an issue?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3334">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">29-02-2004 21:11:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">once an addict always an addict!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3341">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-03-2004 07:07:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hmm, I'm glad this topic has been re-awakened. I made some important points that haven't yet been answered <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";)" title="Wink"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3348">
+	<div class="info">
+		<p class="poster">mattboyslim</p>
+		<p class="dt">02-03-2004 12:51:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">i've just realised why i never enter this part of the site, however for what its worth and backed up by no evidence whatsoever, most people addicted to drugs can only blame themsleves and there lack of self control in the first place</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3349">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">02-03-2004 18:22:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hear hear!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3372">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">07-03-2004 22:21:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, I keep meaning to answer some of the points Matt brought up ages back. <br>
+Possibly something for a time when I've had more than 2hrs sleep though...<br>
+Quick note for Matt G though-a substantial number of addicts in this country didn't become addicts through their own lack of willpower; if you're physically addicted to a substance it means that your body doesn't function properly when it's withdrawn: inslulin dependant diabetics, epileptics, becotide dependant athsmatics... not all drugs are illegal!  <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3383">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">08-03-2004 11:53:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I disagree. I think their substantial lack of willpower came about from their inability to refuse the drugs in the first place, or their stupiditity to overdose.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3390">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">09-03-2004 00:13:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Does that make any sense to anyone else?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3394">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-03-2004 10:21:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Bah, I edited it to make it a little clearler, although three of my housemates understood it fine. How do you find that, Ms fancy-english degree with all your science?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3398">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">09-03-2004 11:19:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Does anyone else notice how matt and alex can never agree?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3399">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">09-03-2004 20:31:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Bah, I agree with you, but Alex starts to, I disagree.<br><br>
+Alex has a disease where she must argue a point, no matter what.<br><br>
+It's called woman. Heh heh.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3403">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">10-03-2004 17:01:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">As one of the only few female members of drunkit, I feel it my duty to have a comeback on that one!<br><br>
+Us women have to get our point across because you blokes never listen!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3404">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">10-03-2004 17:05:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Maybe there is a reason we dont listen...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3408">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">10-03-2004 22:36:56</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Sorry Matt, that only (occasionally) works with athsma.<br>
+If you are an insulin-dependant diabetic who doesn't take insulin-you die. <br>
+If you're an epileptic who doesn't have the right medication-you usually end up with brain damage. <br><br>
+Going on your track record, Matt, that makes you a woman too....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3414">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">11-03-2004 12:55:51</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah, because you don't like it when women are right............ <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p3424">
+	<div class="info">
+		<p class="poster">mattboyslim</p>
+		<p class="dt">12-03-2004 16:33:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">spot on matt, its mnot will power to get off its lack of will power to say no in the first place. I understand what your saying</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

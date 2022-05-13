@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shocking - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Shocking</h1>
+
+<div class="post" id="p558">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-07-2003 12:13:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The public sector has increased by nearly 350,000 people. The NHS by 180,000 workers. Of this, only 80,000 are doctors, nurses or other treating staff.<br><br>
+A shocking indictment of a shocking government.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p559">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-07-2003 12:14:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">There are also 1.1 million civil servants at white hall, up from 900,000 six years ago...<br><blockquote><div><cite>Tony Blair wrote:</cite>Our three main priorities are: tax and spend, tax and spend, tax and spend.</div></blockquote></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p560">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">30-07-2003 13:22:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yes, I agree.<br>
+They should have only employed Doctors and Nurses to build the new Swindon hospital.<br>
+They should make nurses spend all their time managing and running hospitals, rather than actually treating people.<br>
+They should force doctors to stop diagnosing illnesses, and start carrying out medical research.<br><br>
+Of course not everyone employed by the NHS will be directly involved in the treatment aspect!  That's a very basic 'Sun reader' reaction to the facts.<br><br>
+Those statistics aren't necessarily a 'shocking indictment' at all - you'd need much more information to provide that.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p561">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">30-07-2003 14:38:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">When less than half of the NHS has anything to do with healthcare, I think it is a shocking indictment. There are more administrators than beds.<br><br>
+The builders of the new hospital would not have been public sector workers, they'd have been outside contracters -- as are the cleaners etc, so I reject the argument that doctors and nurses should build the new hospital.<br><br>
+Doctors do spend up to 60% of their time filling in paper work than treating people under the current top-down Labour approach. So, I reject that they don't 'run' the hospitals.<br><br>
+Who said anything about research? Don't put words in my mouth <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":-)" title="Smile"><br><br>
+The point is that the NHS is a waste of money and the current government's solution is to pile more staff, more money and more taxes into keeping it that way.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p567">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">30-07-2003 22:41:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">No, you're right, you didn't mention research-which I suspect is Sam's point-there are thousands of medical work that don't involve direct work with patients, and therefore go unconsidered, but we'd rapidly be stuck without-what about pathologists, psychologists, lab technicians, receptionists, record archivists?<br><br>
+The GWH was built by contracted labour (the same people who make much of our railways, sadly enough, so we'll know who to blame when the radiography department de-rails...). The clenaers are also an independant company (or at least hired by one) but that's not the case in many hospitals round the country.<br><br>
+As for doctors managing the NHS-perhaps the 60% of their time they spend doing paperwork is part of the problem? Teachers have to do an awful lot of paperwork not directly connected with teaching (or indeed their jobs) they'd often rather not do- perhaps this is the case with doctors too?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p570">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">30-07-2003 22:56:02</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I second the amount of paper work teachers have to do, my mum will spend the day at school and then until ten at night filling in forms etc.  Its all junk that "needs" to be written to cover the teacher and the school so when in the future little jimmys mum trys to sue the school when he cant read his name aged ten the school can turn around and show her a detailed progress report of how he spent his time eating shoes.<br>
+It stems from the Americans.....</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p576">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 11:26:05</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's exactly my point though! Doctors/Teachers et al spend their time filling in paper work which gets filed to the civil service. What good is that to anyone?<br><br>
+Stupid Labour.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p580">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">31-07-2003 11:31:52</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It seems like if they don't provide this audit trail they are putting themselves at risk from libel action from disgruntled clients or fraudsters.<br><br>
+This is a terrible situation to be in, but other than a total overhall of the British legal system or a sudden change in psyche, I can't see any way around it.<br>
+So they HAVE to employ civil servants to do all the crappy paperwork.<br><br>
+It's all the American's fault!  Bloody libel cases...<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p583">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 11:44:31</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's nonsense. The teachers themselves shouldn't be liable to lawsuits. Problem solved.<br><br>
+If a child is illiterate after 11 years of schooling, they're probably a retard or something anyway. Besides, it's a failing of the education system, not the teacher. There should be a system of appeals in place from a non-legal context. This way, by granting teachers immunity from prosecution in that respect will enable them to do their job.<br><br>
+Of course, prosecution should still be possible in other cases, such as abuse, but then that's a bit different to paperwork.<br><br>
+Some stats: Labour have introduced, on average, 15 new regulations for business/public sector people every working day since 1997.<br><br>
+Tax, for the typical family, is up by ?5500 since 1997. That's 50%. In addition, the higher earning threshold has been decreased, while the tax will be increased to 60%.<br><br>
+Now tell me, in all of this, what area of life has been improved?<br><br>
+One million people are on NHS waiting lists. The NHS has shown no improvement in six years. In some cases, quite the opposite.<br><br>
+30,000 schoolchildren leave school without a single GCSE each year. No improvement there.<br><br>
+Hundreds of schools across the country have to shut down, send entire years home or operate half-days due to a crisis in funding. A unique touch that only a Labour government could bring. Education, education, education!<br><br>
+Public transport is still a mess. University tuition puts off lower-income families from university. Pensioners are facing a ?5 billion a year deficit in their pensions. Three wars too! Way to go!<br><br>
+The challenge: Name me an area of public life that has actually improved as a result of the Labour government. I don't care about the economy, relations with Ameirca, strength of the pound, the euro or anything like that. I simply want to know, where in all of Labour's public taxing is there some <span style="text-decoration:underline">effective</span> public spending?<br><br>
+Answers on a postcard please.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p590">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">31-07-2003 12:20:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Violent crime has dropped!<br><br>
+apart from if you're James<br>
+hehe</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p591">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">31-07-2003 12:21:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If you must...<br><br><br>
+There are more nurses and doctors working in the NHS than at any time in the last 15 years. <br>
+31,500 more nurses, 9,600 more doctors, 68 new hospitals have been given the go-ahead, and we have the first increase in bed numbers since 1971.<br><br>
+Seventy five per cent of the NHS budget will be controlled by frontline doctors and nurses in primary care trusts by 2004. In 1997, this was just 15 per cent. And the number of instructions sent out by ministers to the NHS has fallen from 298 health service circulars in 1996 to 26 in 2001.<br><br>
+Crime is down by 27 per cent (British Crime Survey) since 1997<br><br>
+Steps to target street crime in ten parts of England have cut robbery by 17 per cent according to a report published today. Home Secretary David Blunkett welcomed the news, suggesting that there have been 17,000 fewer victims as a result.<br><br>
+Over five million pensioners will be better off because of Labours new Pension Credit. It will provide on average around ?400 extra a year for pensioner households with some gainning up to ?1,000 a year. And those pensioners who have put a little away for their retirement will also be rewarded for having done so.<br><br>
+The New Deal for young people has helped over 350,000 young people into jobs. Long term youth unemployment has fallen by 75 per cent.<br><br>
+There are 1.5 million more people in work since 1997. At below 1 million, unemployment is at its lowest since 1975.<br><br>
+Labour lifted the Tory cap on student numbers which are now at a record high. Over two million students are now in higher education, a rise of 7.5 per cent compared with 1996.<br><br>
+We have seen the best-ever primary school results. 75 per cent of 11-year-olds are at their expected level in English and 71 per cent in maths. In 1997 almost half of 11-year-olds were unable to read, write or do basic maths at an acceptable standard.<br><br>
+Smaller infant classes for all five, six and seven-year-olds. In 1997, far too many children were in classes of over 30. Now only 0.1 per cent of infants are in classes of 30 or more.<br><br>
+Highest teacher numbers for over a decade, with more than 20,400 additional teachers since 1997.<br><br>
+We now have the cleanest rivers, beaches, air and drinking water since the Industrial Revolution.<br><br><br>
+Most importantly of all, free fruit is being made available in schools for all four to six-year-olds!!!<br><br><br>
+Discuss.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p598">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">31-07-2003 14:31:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Its all sounding good apart from the bit about more people going to universtiy which is silly and is putting an unessecary strain on the public purse.  An unnessecary strain soon to be removed by top up fees, a system that penalises people doing technical subjects of the type that we need and rewards those doing useless degrees in Fine Arts etc...<br><br>
+More people in University is not a good thing, there were enough, now there are too many over-qualified* people.<br><br>
+*over-qualified in that they have a degree in media studies and ideally would know how to plumb a sink in...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p600">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">31-07-2003 14:39:13</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">True, I suppose we'll be relying on skilled migrants to do essential jobs like plumbing and building in the near future.<br><br>
+Surely an educated population must be in the countries interests though?  We'll win loads of prize money in international pub quizzes and pump it back into the UK exonomy!!!<br><br>
+Seriously, I think in Germany they place equal prestige to their academic universities and their 'skill' universities - this country is so class ridden that people often fail to recognise the importance of such hands-on skills.<br><br>
+They should turn crap Uni's such as Bristol and Cardiff into training camps for bricklayers and roofers - it would be far more useful than the trash they churn out now.<br><br><br>
+Sam (flame suit on!)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p602">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 14:41:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Exactly. I'm against targets of any nature for higher education. It should be "If you wanna go, go, if you don't, we won't force you" as it always has been... until 1997 that is.<br><br>
+Stupid Labour.<br><br>
+As for education, Labour are butchering that. Crime; fair enough, they've done a good job. Health? Don't make me laugh.  Free fruit is good.<br><br>
+But on all the other counts they are incredibly guilty.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p604">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">31-07-2003 15:04:01</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">On average, the best measure of a kids next exam results are his/her last ones, i.e. to estimate someone's A level results, the best guess will be based on GCSE results, which will be based on Key Stage 3 which will be based on Key Stage 2 etc...<br><br>
+What this means is that academic achievement is almost built in at a very early age - it is very hard for any school/educational establishment to add 'value' to a pupil - they are normally only capable of maintaining the childs predicted development.<br><br>
+If the Labour Government are increasing the acheivement of infant school age pupils (the only age group which anyone is likely to improve) then in 10 years time they will have increased the overall standard of GCSE results.  Education is a long process, you can't suddenly change a 14 year old retard into a 14 year old genius - the damage has already been done.<br><br>
+So Labour aren't "butchering" education - they're building the foundations for the most educated population this country has ever possesed.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p605">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">31-07-2003 15:04:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">On average, the best measure of a kids next exam results are his/her last ones, i.e. to estimate someone's A level results, the best guess will be based on GCSE results, which will be based on Key Stage 3 which will be based on Key Stage 2 etc...<br><br>
+What this means is that academic achievement is almost built in at a very early age - it is very hard for any school/educational establishment to add 'value' to a pupil - they are normally only capable of maintaining the childs predicted development.<br><br>
+If the Labour Government are increasing the acheivement of infant school age pupils (the only age group which anyone is likely to improve) then in 10 years time they will have increased the overall standard of GCSE results.  Education is a long process, you can't suddenly change a 14 year old retard into a 14 year old genius - the damage has already been done.<br><br>
+So Labour aren't "butchering" education - they're building the foundations for the most educated population this country has ever possesed.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p606">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">31-07-2003 15:11:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Birmingham Uni is for absolute loser, its a worse uni that Bristol and even Cardiff!!!<br><br>
+You should keep your trop shut you silly silly brummy.<br><br>
+Brummies are snails... proof<br><br>
+a brummy saying "I'm going home" would be heard to say "uuhm gowin' uuhm" hence the word used to refer to ones self is also the word for refering to ones home, the only animal other than brummies to display the characteristic of being its own home is a snail.<br><br>
+the only difference being of course that the average snail is faster than the average brummy.<br><br><br>
+But seriously...<br>
+We don't need more people in Uni, its te class system that is making everyone go to uni, its a desire to be middle class, 'd be perfectly happy to be working class if I was less intelligent, being a plumber is much better money that working ina  video shop after having done media studies at luton for your degree.  As it is I should get a worthwhile degree which will set me up for a better job than plumbing.  And before you start sprouting marxism at me.. I mean a better paid job, not that 'm better than a plumber in an intangible sense.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p607">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 15:11:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">If that's the case, why are schoolchildren being sent home from school because the schools cannot afford to educate them, teachers threatening industrial action cosntantly and head teachers condemning the present system as worthless?<br><br>
+The standards of results isn't really a testable issue, as you may say "MOre people are getting degrees these days", but then it's harder to get a job without a degree now. Also, there is no proof that GCSE's aren't getting easier. I'm not saying they are, but if they were, you couldn't compare. I'm talking about basic standards in schools that Labour are failing to control. Why are people so blind as to the fact that schools are not given enough money to even educate children. That is an unforgivable failure in government.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p608">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 15:15:39</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">PS. Labour suck... Na na na na na! As does Birmingham. Wantage is a shit hole and Oxford United suck. Villa are the worst embarassment ever.<br><br>
+Just thought I'd be like a politician now and add a bit of ad hominem...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p609">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">31-07-2003 15:16:04</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Matt its just as I explaned in my graph... too many lazy northerners.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p610">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">31-07-2003 15:18:24</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content"><a href="http://www.soton.ac.uk/~singsoc/doc/0--1-3784-408136-00.pdf" class="postlink">  I clearly have rights to abuse your Universities, and Sam can just about call matt's crap</a></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p612">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 15:31:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Bah, ad hominem again.<br><br>
+Sam got the best A-level results out of all of us I think. I probably got the worst, not sure.<br><br>
+Birmingham and Cardiff are equal in that table.<br><br>
+Although Cardiff for Computer Science is 6th best in the country... which puts it in a little more perspective.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p613">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 15:33:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">PS. Yeah, stupid northerners. THere aren't very many at my uni, probably because they're too busy voting for hte BNP or causing riots or something. Or just living off the dole... something northern and cheap anyway.<br><br>
+Note: It is the official policy of drunkit not to discriminate against anyone, other than northerners, americans, europeans, asians and africans. We don't like stupid people, the old, the younger-than-us, the non-missionites and lagerboys either.<br><br>
+Other than that, we're pretty tollerant.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p616">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">31-07-2003 16:03:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">so where do i fit in to the abuse?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p617">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">31-07-2003 16:06:44</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I assumed you were black and/or Jewish.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p625">
+	<div class="info">
+		<p class="poster">Mr_Lenehan</p>
+		<p class="dt">31-07-2003 20:48:00</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">when i'm prime minister i'm going to get rid of the NHS... as per my last post <img class="smilies" src="../../../images/smilies/icon_smile.gif" width="15" height="15" alt=":)" title="Smile"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p628">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">01-08-2003 09:41:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">When I am king you will be first against the wall,<br>
+with you opinion which is of no consequence at all</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p630">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">01-08-2003 09:50:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Rain down, rain down <br>
+Come on rain down on me <br>
+From a great height <br>
+From a great height... height... <br>
+Rain down, rain down <br>
+Come on rain down on me <br>
+From a great height <br>
+From a great height... height... <br>
+Rain down, rain down <br>
+Come on rain down on me</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p631">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">01-08-2003 10:48:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">ok!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p632">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">01-08-2003 11:54:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ah Radiohead, a great way to cheer yourself up on a political forum associated with reckless drinking.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p643">
+	<div class="info">
+		<p class="poster">Alex B</p>
+		<p class="dt">02-08-2003 22:36:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ah, the joys of 'value added'. Sensible, but tons of paperwork for teachers (just don't talk to my Dad about it). <br><br>
+Quite frankly, I'm seriously intending on finishing my degree and taking a course in plumbing (if I don't just push off to Japan), since no-one actually needs English students anyway. <br><br>
+On the subject of university applications, no-one is being 'forced', as Matt, puts it, into going to university. There seems to be an awful lot of talk about the governement 'encouraging' school-leavers to go to uni, but does anyone know what the actual encouragement involves? It's certianly not financial incentives or active discouragement from going into the workplace. <br><br>
+I second Sam, it's a combination of class prejudice and interlectual snobbery (generly not among accademics/traditionally 'interlectual' groups though, interestingly enough) that stops the same prestige being given to vocational education. <br><br>
+When my parents first started teaching, there was far more teaching of vocational subjects in schools than today. There was a drive to increase the number in the National Curriculum a few years back, but nothing really happened. I think this would probably be more useful than a Bac style certificate that's probably going to be introduced instead of AS/A2s (which were a complete farce from the start anyway) or pointless GCSEs such as the newly introduced <em class="text-italics">compulsory</em> 'Citizenship'- which includes such teachings as:<br><br>
+'A good citizen is one who is a member of a mainstream political party or religious group.'<br><br>
+Talk about trying to herd us into boxes...</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p654">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">03-08-2003 11:38:38</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">That's my point though; the governemnt are forcing people, at present, to take a higher level degree. We were all off to university anyway, so missed it. If you didn't want to go, you faced a lot of pressure at New College etc to do some form of higher education - usually in the form of a BSc/BA etc.<br><br>
+However, this is wrong. Why force people to do what they don't want to do? Instead, provide better courses such as HND's for the masses and market them as attractive alternatives to three year degrees.<br><br>
+None of this stupid nonsense that we have at the moment, where 50% of the population must be at university. Just let whoever wants to go, go, and let whoever doesn't stay at home!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Today of all Days... - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Politics</a></p>
+</div>
+
+<h1>Today of all Days...</h1>
+
+<div class="post" id="p131">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">04-07-2003 14:49:53</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">What's so special about 4th July? It's not as if anyone listens to the supposed freedom and democratic greantess of the US any more... even US citizens are disillusioned by their nations apparant greatness, unless the media has flushed their minds with patriotism over impartiality and fact.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p349">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">22-07-2003 07:41:57</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Hadn't seen this post.<br><br>
+I agree, the USA sucks, but the fourth of July has becoome like our chrstmas, devoid of its original meaning.  It was always a bit silly.  Celebrating a statement that all men are created equal in a country where the pigmentation of people's skin affected which busses they could use and which schools they could attend.  Its little wonder that "independance day" lost its meaning a long time ago.<br><br>
+People now say "happy fourth of July", I think we should adopt this policy with christmas, as nobody really s celebrating Jesus are they?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p350">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">22-07-2003 08:15:34</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">It would be a bit wierd saying "Happy 25th of December!" to each other.<br><br>
+I'll stick with 'Christmas', despite my lack of belief - just for traditional aesthetic reasons.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p351">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">22-07-2003 08:21:22</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I quite fancy saying "happy 25th of december" that would be fun.<br>
+Also on people's birthdays, "happy 17th of January jez!"<br><br>
+ok maybe the idea isn't great</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p355">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">22-07-2003 11:00:03</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I suppose Christmas is so deep within our cultural roots (we sort of had it before the whole Jesus thing anyway, with the pagans) that it'd be hard to stop... That and it's quite fun usually.<br><br>
+But independence day is American and therefore wrong.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p360">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">22-07-2003 12:26:36</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I suppose so, we don't like anytinjg american at all. Of course HTML is american, as is linux and windows, an.. most software come to think of it.  Your life would be empty without america, admit it!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p366">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">22-07-2003 21:40:43</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">HTML is a worldwide standard <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=";-)" title="Wink"><br><br>
+Linux was invented by a Swedish man I think, called Linus Tolverdos or something.<br><br>
+Windows is American; but it has many more faults.<br><br>
+PHPBB is chiefly British programmed and the default language us UK-English <img class="smilies" src="../../../images/smilies/icon_surprised.gif" width="15" height="15" alt=":o" title="Surprised"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p375">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">23-07-2003 07:28:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">And the IBM pc?<br>
+The Internet?<br>
+Originally Linux may have been invented by a swedish man, but all the current distribution were American wrtten.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p378">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">23-07-2003 09:44:06</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">The first computers were built just outside Milton Keynes during the 2nd World War - by Brtits.  We just weren't allowed to tell anyone due to it being 'Secret' and the blueprints were burnt.<br><br>
+We'd have got there soon enough, with or without IBM's input.<br><br>
+Anti American Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p382">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-07-2003 11:08:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Mandrake is French.<br>
+SuSe is German.<br>
+Debian has no centralised location<br>
+...<br><br>
+Anyway, this is a petty argument. The Internet was invented by a Swedish guy or something too. Stupid Americans claiming they invented it.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p383">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-07-2003 11:11:17</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Not to mention the first ever computer design was by a Cambridge professor, Babbage, who was so far ahead of his time that the computer (the analytical machine) couldn't be built back then due to the lack of engineering prescision. The industrial revolution changed this, and nearly eighty years later they built the machine according to his original blue-prints to find out that it worked!<br><br>
+Britian and Germany played an equal, if not a greater part in the invention of modern computers. Many ignore Germany because of political reasons in the 1930's and 1940's, but they really did invent some exciting stuff.<br><br>
+As you can tell, one of my papers in the first year was on the history of computing <img class="smilies" src="../../../images/smilies/icon_wink.gif" width="15" height="15" alt=":wink:" title="Wink"><br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p387">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">23-07-2003 11:19:54</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ok you've convinced me<br><br>
+lets bomb the USA</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p394">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">23-07-2003 12:45:26</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">With posts like that, the NSA will be onto Drunkit like a flash!  They'll shut us down.<br><br>
+Let's see if we can entice them in by printing 'key' words:<br><br>
+Saddam<br>
+Osama<br>
+Terrorist<br>
+Bush<br>
+Taliban<br>
+Iraq<br><br>
+I expect they scan all our postsm unless Matt Day has encrypted this site with PGP or something similar!!!<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p398">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">23-07-2003 13:40:23</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Muslim<br>
+Towel-head<br>
+axis-of-evil<br>
+RIAA<br>
+COMMUNISM<br>
+SOCIALISM<br>
+FREEDOM<br>
+DEOMCRACY<br>
+MWA HA HA HA HA<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p400">
+	<div class="info">
+		<p class="poster">Mike</p>
+		<p class="dt">23-07-2003 13:43:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Free big mac</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p404">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">23-07-2003 14:00:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">"Whoever get the most votes should win the election."<br><br>
+They'll be down on me like a ton of bricks with that statement.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p420">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">23-07-2003 14:47:08</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Revolution starts in birmingham!!<br><br>
+The brummies are revolting!! (obvious)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p422">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">23-07-2003 14:50:11</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">We're good at causing 'revulsion' <img class="smilies" src="../../../images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"><img class="smilies" src="../../../images/smilies/icon_exclaim.gif" width="15" height="15" alt=":!:" title="Exclamation"><img class="smilies" src="../../../images/smilies/icon_question.gif" width="15" height="15" alt=":?:" title="Question"><br><br>
+Just have to open our mouths and people run for miles.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p425">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">23-07-2003 14:54:15</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But on a more serious note, Primal Scream were going to release a song called bomb the pentagon but they decded not to a little while after somebody actually did.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>

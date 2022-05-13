@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://drunkit.co.uk/etc/themes/default/html/javascript/javascript.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://drunkit.co.uk/etc/themes/default/html/styles/styles.css">
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.js"></script>
+<script type="text/javascript" src="../jquery.tablesorter.pager.js"></script>
+<script type="text/javascript" src="../forum.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tomorrow night - Thurs 28th - Drunkit Forums Archive</title>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/stylesheet.css?assets_version=7" rel="stylesheet">
+<link href="./styles/drunkit/theme/en/stylesheet.css?assets_version=7" rel="stylesheet">
+</head>
+
+<body id="phpbb" class="nojs notouch section-index ltr " style="padding: 0 !important" onload="load('forum')">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" id="top_nav">
+    <a class="navbar-brand" href="https://drunkit.co.uk" id="top_nav_brand">
+        <img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitTopLogo-new.png" width=192 height=65 id="top_nav_logo" /><img src="https://drunkit.co.uk/etc/themes/default/html/images/topMarker.gif" id="topmarker" width=200 height=65><img src="https://drunkit.co.uk/etc/themes/default/html/images/drunkitSecondTransition.jpg" width=200 height=65 id="toptransition">
+    </a>
+    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target=".collapse-drunkit" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menu_toggle">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--button id="menu_toggle">Toggle menu</button-->
+
+<div class="collapse navbar-collapse justify-content-end collapse-drunkit" id="navbarSupportedContent">
+  <div class="login-container">
+    <form action="login.php" method="post">
+	<input type="hidden" name="autologin" value="1" />
+	<input type="hidden" name="login" value="Log in" />
+      <input type="text" placeholder="Username" name="username" id="login_top" disabled="disabled">
+      <input type="password" placeholder="Password" name="password" id="pass_top" disabled="disabled">
+      <button type="submit" class="coolbutton" disabled="disabled">Login</button>
+    </form>
+  </div>
+</div>
+</nav>
+<div id="top_bar" class="navbar" class="collapse-drunkit" style="font-size: 10px">Drunkit Forum Archive
+<div class="justify-content-end" id="quickLinks">
+    <a href="https://drunkit.co.uk/bin/articles?a=new" class="panelLink">&nbsp;New Article&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/" class="panelLink">&nbsp;Forum Index&nbsp;</a>
+	<a href="https://forums.drunkit.co.uk/search.php?search_id=newposts" class="panelLink">&nbsp;Unread Posts&nbsp;</a>
+</div>
+</div>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="collapse-drunkit">
+					<div class="sidelinkContainer">
+						<div class="imageLockerOne">
+							<a href="https://drunkit.co.uk/bin/home" class="plink" onmouseover="moveOver(home); return true;" onfocus="return true;" onmouseout="moveOut(home); return true;" onblur="return true;"><img id="home" src="https://drunkit.co.uk/etc/themes/default/html/images/home.gif" style="border: 0px; width: 115px; height: 25px" alt="Home" title="Go to the Drunkit home page" /></a>
+						</div>
+						<div class="imageLockerTwo">
+							<a href="https://drunkit.co.uk/bin/articles" class="plink" onmouseover="moveOver(features); return true;" onmouseout="moveOut(features); return true;" onfocus="return true;" onblur="return true;"><img id="features" src="https://drunkit.co.uk/etc/themes/default/html/images/features.gif" style="border: 0px; width: 115px; height: 25px" alt="Features" title="View the Drunkit articles" /></a>
+						</div>
+						<div class="imageLockerThree">
+							<a href="https://forums.drunkit.co.uk/" class="plink" onmouseover="moveOver(messages); return true;" onmouseout="moveOut(messages); return true;" onfocus="return true;" onblur="return true;"><img id="messages" src="https://drunkit.co.uk/etc/themes/default/html/images/messages.gif" style="border: 0px; width: 115px; height: 25px" alt="Messages" title="Go to the Drunkit Forums" /></a>
+						</div>
+						<div class="imageLockerFour">
+							<a href="https://drunkit.co.uk/bin/content/page,pictures/" class="plink" onmouseover="moveOver(pictures); return true;" onmouseout="moveOut(pictures); return true;" onfocus="return true;" onblur="return true;"><img id="pictures" src="https://drunkit.co.uk/etc/themes/default/html/images/pictures.gif" style="border: 0px; width: 115px; height: 25px;" alt="Pictures" title="Terrifying pictures of our members!" /></a>
+						</div>
+						<div class="imageLockerFive">
+							<img src="https://drunkit.co.uk/etc/themes/default/html/images/line.gif" alt="" />
+						</div>
+					</div>
+					<div class="searchFormContainer">
+						<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF">Search The Forums</h3>
+							<form id="sideSearchForm" action="https://forums.drunkit.co.uk/search.php" method="get">
+								<p class="first">
+									<input type="text" name="keywords" size="30" style="width: 75px; border: 1px solid #000000; background-color: #FFFFFF; font-family: tahoma, sans-serif; font-size: 8pt;" placeholder="Query" aria-label="Forum search" />
+									<input type="submit" class="sideEdit" style="width: 30px; margin: 0px; color: black; background-color: white; border: 1px solid black; font-family: tahoma, sans-serif" value="Go" />
+								</p>
+							</form>
+					</div>
+					<div class="pollContainer">
+<h3 style="font-family: tahoma, sans-serif; margin: 0px; margin-bottom: 15px; font-size: 9pt; color: #FFFFFF; text-transform: none !important; border: none !important;">
+<strong>MANY</strong> years since Drunkit began and...</h3>
+
+<table>
+<tr><td class="label" style="color: #ffffff; text-align: center">1.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I forgot all about all this crap!" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">2.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've been too drunk to remember anything" height="8" width="25"> (50%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">3.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I've given up drinking and am boring" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">4.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="Man I'm old now" height="8" width="0"> (0%)</td></tr><tr><td class="label" style="color: #ffffff; text-align: center">5.&nbsp;</td><td class="label" style="color: #ffffff; text-align: left;"><img src="https://drunkit.co.uk/etc/themes/default//components/Poll/images/poll.gif" alt="50%" title="I'm Mike and feel nothing" height="8" width="0"> (0%)</td></tr></table>
+<p>
+	<a href="https://drunkit.co.uk/php/pollspy?id=latest" style="color: #ffffff">View results</a>
+</p>
+
+                        
+					</div>
+    </nav>
+    <script>
+    $("#menu_toggle").click(function(e) {
+      e.preventDefault();
+        console.log("Toggle");
+      $("#sidebar").toggleClass("toggled");
+      $("#top_bar").toggleClass("toggled");
+
+    });
+    </script>
+
+<div class="container-fluid pt-3" id="content">
+
+<div class="breadcrumb">
+	<p><a href="../../../">Drunkit Forums Archive</a> &raquo; <a href="../../">Nights Out</a></p>
+</div>
+
+<h1>Tomorrow night - Thurs 28th</h1>
+
+<div class="post" id="p1023">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">27-08-2003 07:55:07</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Anybody out tomorrow night then?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1047">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">27-08-2003 21:32:20</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">nooooooooooooooooooooooooooooooooooo<br><br>
+cant handle being drunk at work on a friday. Its gotta be a phat one on saturday.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1049">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">27-08-2003 21:43:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Loser.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1050">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">27-08-2003 21:50:32</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Ironic isnt its - at the moment on 102 posts i like archers and lemonade but jo has done about a fifth of the messages i have and shes a lager lover! <br>
+Im not out as im going to gran caneria next week and need to save my pennies. For prostitutes and heroin. Only joking! (i would never take heroin)</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1051">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">27-08-2003 22:06:46</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Lager is about as insuling as Archers and Lemonade though!?!<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1053">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">28-08-2003 07:41:18</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Especially being female as I don't drink the stuff or drink anything out of a pint glass!!!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1054">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">28-08-2003 07:42:45</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">no it isn't nowhere near.<br>
+Lager is still beer.</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1086">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">28-08-2003 11:32:16</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But lager as in Fosters and Carling is what I meant...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1131">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">28-08-2003 17:20:27</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I like my fosters and carling! Isnt carling the same percentage as 6x?</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1136">
+	<div class="info">
+		<p class="poster">Jimmy</p>
+		<p class="dt">28-08-2003 20:52:58</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Yeah just drink it all!!! It all gets you to the same place... Mission <img class="smilies" src="../../../images/smilies/icon_sad.gif" width="15" height="15" alt=":(" title="Sad"></div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1138">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">28-08-2003 23:39:48</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Percentage does not equal good drink...<br><br>
+i.e. 63% rum = rougher than 1% Tournament bitter<br><br>
+Fosters and Carling = rougher than rough. Just fizzy nastyness. Sam will testify to this. Drunkit's only official policy is that Carling and Fosters are nasty.<br><br>
+Well, not that official really.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1141">
+	<div class="info">
+		<p class="poster">Jez</p>
+		<p class="dt">29-08-2003 07:37:35</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">fostersd and carling are plenty good beers.<br><br>
+I'd happily drink them, they are clearly superior to special brew</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1144">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">29-08-2003 09:04:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I can't believe anyone is sticking up for these pissy beers!<br><br>
+I'll testify Matt Day's comments - Carling &amp; Fosters (and Carlsberg) taste like fizzy gnats piss.<br><br>
+I'd choose almost any other alcoholic beverage over them given a choice (other than VK or similar gut-rotting alcopops).<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1148">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-08-2003 11:18:33</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">I'd rather VK to be honest... I only avoid VK 'cos it makes me feel like shit in the morning... Carling et al have an immediate shit effect.<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1151">
+	<div class="info">
+		<p class="poster">JoeyJoJo</p>
+		<p class="dt">29-08-2003 11:23:21</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Personally I think all lager tastes like sh!t!   <img class="smilies" src="../../../images/smilies/icon_lol.gif" width="15" height="15" alt=":lol:" title="Laughing"><br><br>
+Are they still doing VK in Mission?  When I went Sunday they had no V Ice, just that K2 stuff.  Or perhaps they were just trying to get rid of the K2?!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1167">
+	<div class="info">
+		<p class="poster">Bob</p>
+		<p class="dt">29-08-2003 17:24:30</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Id rather have a pint of fosters than any girls drink i.e alchopops such as bacardi breezers, any vk and all the others that i cant be bothered to name. Come on sam, no one is gonna respect you with a lemon bacardi breezer walking round the steam as much as the rest of us with our big man pints!</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1170">
+	<div class="info">
+		<p class="poster">Matt</p>
+		<p class="dt">29-08-2003 18:48:47</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">But Sam would drink real ale, like me...<br><br>
+--Matt</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<div class="post" id="p1176">
+	<div class="info">
+		<p class="poster">Sam</p>
+		<p class="dt">01-09-2003 08:33:37</p>
+	</div>
+	<div class="msg">
+	<!-- BEGIN MESSAGE -->
+	<div class="content">Barlady in the Steam was great on Thursday night - my pint of Timothy Taylor Landlord tasted like bleach or some sort of industrial cleaning fluid.<br><br>
+I timidly took it back, apologised for complaining, and she immediatley poured me a pint of 6X as a replacement.  Wonderful.<br><br>
+She also gave Greenaroo a one-penny discount on his round so he didn't have to break into a tenner.<br><br>
+Sam</div>	<!-- END MESSAGE -->
+	</div>
+</div>
+<footer>
+<!-- This will be appended to each topic. You can use it to add links at the end
+of each topic page. --></footer>
+</div></div>
+</body></html>
